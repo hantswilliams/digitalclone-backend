@@ -28,7 +28,7 @@ async def create_item(item: Item_PostTask):
     ## try to send to firestore
     doc_ref = fs_db.collection('users').document(user_uuid).collection('tasks').document(task.id)
     dataToSend = {u'task_id': task.id, u'input_param': item.input_string, u'task_status': u'pending', u'task_result': u'', u'task_error': u''}
-    doc_ref.set({task.id: (dataToSend)})
+    doc_ref.set(dataToSend)
     return dict(id=task.id, url='localhost:5000/check_task/{}'.format(task.id))
 
     
@@ -60,7 +60,7 @@ def check_task(item: Item_GetTask):
     taskid = id
     doc_ref = fs_db.collection('users').document(user_uuid).collection('tasks').document(taskid)
     dataToSend = {u'task_id': taskid, u'task_status': task.state, u'task_result': task.result, u'task_error': task.info}
-    doc_ref.update({taskid: (dataToSend)})
+    doc_ref.update(dataToSend)
 
 
     return response
