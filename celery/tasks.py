@@ -7,7 +7,6 @@ from celery.exceptions import Ignore
 
 from worker import celery
 
-
 @celery.task(name='hello.task', bind=True)
 def hello_world(self, name):
     try:
