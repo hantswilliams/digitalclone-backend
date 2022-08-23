@@ -1,6 +1,6 @@
 FROM python:3.6
 
-LABEL maintainer="Jitendra Singh <jitendra.singh.iitg@gmail.com>"
+LABEL maintainer="Hants <hantsawilliams@gmail.com>"
 
 COPY requirements_celery.txt /requirements.txt
 RUN pip install -r /requirements.txt

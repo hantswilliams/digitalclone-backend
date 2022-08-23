@@ -1,9 +1,37 @@
 # Dockerized fastapi-celery
 
+- Original repo for this: https://github.com/jitendrasinghiitg/docker-fastapi-celery/issues 
+- My FORKED version for this: https://github.com/hantswilliams/docker-fastapi-celery 
+
+## Notes to self: 
+- Main additions from default repo are currently: 
+  - Integration with Firestore for backing up REDIS logs 
+  - When connecting to firestore using firebase-admin, will need to download the .json key file that has a structure like this: 
+
+```
+{
+  "type": "",
+  "project_id": "",
+  "private_key_id": "",
+  "private_key": "",
+  "client_email": "",
+  "client_id": "",
+  "auth_uri": "",
+  "token_uri": "",
+  "auth_provider_x509_cert_url": "",
+  "client_x509_cert_url": ""
+}
+```
+
+  - In app/main.py, would need to insert in the new .json key file (`nameofproject-firebase-admin.json`) and also then be sure to exclude it in the local .gitignore file, or perhaps change this to be a .env file in the future and put it there 
+
+
+## Original content below this line: 
+
 For FASTAPI i have used docker container from :
 https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker
 
-## Run on local machine
+### Run on local machine
 Install docker and docker-compose
 ###### Run entire app with one command 
 ```
