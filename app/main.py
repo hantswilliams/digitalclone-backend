@@ -70,7 +70,7 @@ async def check_task(user_uuid, task_uuid):
     if task.state == 'SUCCESS':
         taskFinishTime = task.date_done
     else:
-        taskFinishTime = datetime.now()
+        taskFinishTime = None
 
     if task.state == 'SUCCESS':
         response = {

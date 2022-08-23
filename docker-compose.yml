@@ -12,6 +12,7 @@ services:
       - "5000:80"
     depends_on:
       - redis_server
+  
   worker:
     build:
       dockerfile: DockerfileCelery
@@ -21,6 +22,7 @@ services:
       C_FORCE_ROOT: "true"
     depends_on:
       - redis_server
+  
   redis_server:
     image: redis
 
