@@ -1,23 +1,22 @@
-aiofiles==0.5.0         #part of original req file 
-fastapi==0.80.0         #part of original req file was originally 0.60.1
-celery==4.4.7           #part of original req file 
-redis==3.5.3            #part of original req file 
-firebase-admin==5.2.0   #part of original req file 
+aiofiles==0.5.0                     #part of original req file 
+fastapi==0.80.0                     #part of original req file was originally 0.60.1
+celery==4.4.7                       #part of original req file 
+redis==3.5.3                        #part of original req file 
+firebase-admin==5.2.0               #part of original req file 
 
-uvicorn[standard]       #for fast API framework
-python-multipart        #for fast API framework
-gunicorn                #for fast API framework
+uvicorn[standard]==0.15.0           #for fast API framework // might be able to remove this since docker image might contain it, check later 
+python-multipart==0.0.5             #for fast API framework // need this for file uploads 
+gunicorn==20.1.0                    #for fast API framework // might be able to remove this since docker image might contain it, check later 
 
-ffmpeg-python           #for audui and picture processing modules 
-pydub                   #for audui and picture processing modules 
-imageio-ffmpeg          #for audui and picture processing modules
+ffmpeg-python==0.2.0                #for audui and picture processing modules 
+pydub==0.25.1                       #for audui and picture processing modules 
+imageio-ffmpeg==0.4.7               #for audui and picture processing modules
 
-scikit-image            #video cloning modules
-python_speech_features  #video cloning modules
-pyworld                 #video cloning modules
-pyyaml                  #video cloning modules
-pytorch-lightning       #video cloning modules
-imageio                 #video cloning modules
-scipy                   #video cloning modules
-pyworld                 #video cloning modules      
-opencv-python           #video cloning modules
+scikit-image==0.19.3                #video cloning modules
+python-speech-features==0.6         #video cloning modules
+pyworld==0.3.0                      #video cloning modules
+PyYAML==5.4.1                       #video cloning modules
+pytorch-lightning==1.7.2            #video cloning modules
+imageio==2.21.1                     #video cloning modules
+scipy==1.9.0                        #video cloning modules
+opencv-python==4.6.0.66             #video cloning modules
