@@ -39,6 +39,13 @@ class Item_PostTask(BaseModel):
     user_uuid: str
     input_string: str
 
+class Item_PostTask_Video1(BaseModel):
+    user_uuid: str
+    image_url: str
+    audio_url: str
+    image_name: str
+    audio_name: str
+
 class Item_GetTask(BaseModel):
     user_uuid: str
     task_uuid: str
@@ -55,9 +62,21 @@ async def create_item(item: Item_PostTask):
     doc_ref.set(dataToSend)
     return dict(id=task.id, userid=item.user_uuid, url='localhost:5000/check_task/' + user_uuid + '/{}'.format(task.id))
 
+@app.post("/start-task/video1/")
+async def create_item(item: Item_PostTask_Video1):
+    task_name = "video1.task"
+    user_uuid = item.user_uuid
+    task = celery.send_task(task_name, args=[item.user_uuid, item.image_url, item.audio_url, item.image_name, item.audio_name])
+    currentDateTime = datetime.now()
+    ## try to send to firestore
+    doc_ref = fs_db.collection('users').document(user_uuid).collection('tasks').document(task.id)
+    dataToSend = {u'task_id': task.id, u'input_param': 
+            {u'image_url': item.image_url, u'audio_url': item.audio_url, u'audio_name': item.audio_name, u'image_name': item.image_name}, 
+        u'task_status': u'pending', u'task_result': u'', u'task_error': u'', u'task_created_at': currentDateTime}
+    doc_ref.set(dataToSend)
+    return dict(id=task.id, userid=item.user_uuid, url='localhost:5000/check_task/' + user_uuid + '/{}'.format(task.id))
 
 # check task status by user_uuid and task_uuid and return result
-
 @app.get("/check_task/{user_uuid}/{task_uuid}")
 async def check_task(user_uuid, task_uuid):
     user_uuid = user_uuid

@@ -4,19 +4,6 @@ celery==4.4.7                       #part of original req file
 redis==3.5.3                        #part of original req file 
 firebase-admin==5.2.0               #part of original req file 
 
-uvicorn[standard]==0.15.0           #for fast API framework // might be able to remove this since docker image might contain it, check later 
-python-multipart==0.0.5             #for fast API framework // need this for file uploads 
-gunicorn==20.1.0                    #for fast API framework // might be able to remove this since docker image might contain it, check later 
-
-ffmpeg-python==0.2.0                #for audui and picture processing modules 
-pydub==0.25.1                       #for audui and picture processing modules 
-imageio-ffmpeg==0.4.7               #for audui and picture processing modules
-
-scikit-image==0.19.3                #video cloning modules
-python-speech-features==0.6         #video cloning modules
-pyworld==0.3.0                      #video cloning modules
-PyYAML==5.4.1                       #video cloning modules
-pytorch-lightning==1.7.2            #video cloning modules
-imageio==2.21.1                     #video cloning modules
-scipy==1.9.0                        #video cloning modules
-opencv-python==4.6.0.66             #video cloning modules
+# uvicorn[standard]==0.15.0           #for fast API framework // might be able to remove this since docker image might contain it, check later 
+# python-multipart==0.0.5             #for fast API framework // need this for file uploads 
+# gunicorn==20.1.0                    #for fast API framework // might be able to remove this since docker image might contain it, check later 
