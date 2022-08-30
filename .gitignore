@@ -7,8 +7,17 @@ digital-clone-saas-firebase-adminsdk-8s7c6-35294053d3.json
 celery/digital-clone-saas-firebase-admin-sdk.json
 *celery/digital-clone-saas-firebase-admin-sdk.json
 
+aws_lambda/functions/audio2head/digital-clone-saas-firebase-admin-sdk.json
+*aws_lambda/functions/audio2head/digital-clone-saas-firebase-admin-sdk.json
+
+aws_lambda/functions/audio2head/a2h/digital-clone-saas-firebase-admin-sdk.json
+*aws_lambda/functions/audio2head/a2h/digital-clone-saas-firebase-admin-sdk.json
+
 celery/functions/audio2head/checkpoints/audio2head.pth.tar
 *celery/functions/audio2head/checkpoints/audio2head.pth.tar
+
+aws_lambda/functions/audio2head/a2h/checkpoints/audio2head.pth.tar
+*aws_lambda/functions/audio2head/a2h/checkpoints/audio2head.pth.tar
 
 *.DS_Store
 

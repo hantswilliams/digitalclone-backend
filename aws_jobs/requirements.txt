@@ -1,0 +1,13 @@
+firebase-admin==5.2.0               #for getting download links/URLs of files to process
+ffmpeg-python==0.2.0                #for audui and picture processing modules 
+pydub==0.25.1                       #for audui and picture processing modules 
+imageio-ffmpeg==0.4.7               #for audui and picture processing modules
+
+scikit-image==0.19.3                #video cloning modules
+python-speech-features==0.6         #video cloning modules
+pyworld                             #video cloning modules
+PyYAML==5.4.1                       #video cloning modules
+pytorch-lightning==1.7.2            #video cloning modules
+imageio==2.21.1                     #video cloning modules
+scipy==1.9.0                        #video cloning modules
+opencv-python==4.6.0.66             #video cloning modules
