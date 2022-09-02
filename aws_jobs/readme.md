@@ -29,8 +29,28 @@
     2. When you push a update, new ECR build, will need to connect ECR image to a new `Job definition` , e.g., you cant try old one 
     3. Job definition settings for how the current image is build: 
         - Command: `python3 test.py` will run the test.py file found in aws_jobs/a2h 
-        - Environment variables configuration: `ENV_VAR_1` and `ENV_VAR_2` and examples that could be placed with appropriate values
 
+- Current settings: 
+    - Compute environment: 
+        - Instance Type: p2 
+        - Min/Desires CPUs: -- 
+        - Max vCPUs: 256 
+        - Allocation strategy: BEST_FIT
+    - Job definition: 
+        - Platform capabilities: EC2 
+        - Executation timeout: 1000 
+        - Type: container 
+        - Command: python3 test.py
+        - Image: 521663328127.dkr.ecr.us-east-1.amazonaws.com/batchjob-a2h:latest
+        - vCPUs: 4 
+        - Memory: 12288
+        - GPUs: 1 
+        - Env configs: 
+            - ENV_USER_UUID
+            - ENV_IMAGE_URL
+            - ENV_AUDIO_NAME
+            - ENV_IMAGE_NAME
+            - ENV_AUDIO_URL
 
 - Job definition: 
 ```
