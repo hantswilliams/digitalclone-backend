@@ -16,8 +16,16 @@ aws_lambda/functions/audio2head/a2h/digital-clone-saas-firebase-admin-sdk.json
 celery/functions/audio2head/checkpoints/audio2head.pth.tar
 *celery/functions/audio2head/checkpoints/audio2head.pth.tar
 
+aws_jobs/a2h/checkpoints/audio2head.pth.tar
+*aws_jobs/a2h/checkpoints/audio2head.pth.tar
+
 aws_lambda/functions/audio2head/a2h/checkpoints/audio2head.pth.tar
 *aws_lambda/functions/audio2head/a2h/checkpoints/audio2head.pth.tar
+
+aws_jobs/a2h/digital-clone-saas-firebase-admin-sdk.json
+*aws_jobs/a2h/digital-clone-saas-firebase-admin-sdk.json
+
+app/.env
 
 *.DS_Store
 
