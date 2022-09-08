@@ -30,6 +30,7 @@ def test():
     audio_url=os.getenv('ENV_AUDIO_URL')
     image_name=os.getenv('ENV_IMAGE_NAME')
     audio_name=os.getenv('ENV_AUDIO_NAME')
+    output_name=os.getenv('ENV_OUTPUT_NAME')
 
     ## vars assigned
     print('user_uuid: ', user_uuid)
@@ -37,6 +38,10 @@ def test():
     print('audio_url: ', audio_url)
     print('image_name: ', image_name)
     print('audio_name: ', audio_name)
+    print('output_name: ', output_name)
+
+    ## remove special characters from outputname
+    output_name_clean = output_name.replace('[^A-Za-z0-9]+', '_')
 
     # create a temp directory if one doesn't exist 
     if not os.path.exists('/tmp/' + user_uuid):
@@ -67,7 +72,8 @@ def test():
     # run the actual model here
     audio2head(audio_local_path, image_local_path, mode_path, video_local_path)
 
-    video_fire_path = 'user/{user_uuid}/processed/awsbatch_processed_video1_'.format(user_uuid=user_uuid) + image_name[:-4] + '_' + audio_name[:-4] + '.mp4'
+    # video_fire_path = 'user/{user_uuid}/processed/awsbatch_processed_video1_'.format(user_uuid=user_uuid) + image_name[:-4] + '_' + audio_name[:-4] + '.mp4'
+    video_fire_path = 'user/{user_uuid}/processed/awsbatch_processed_video1_'.format(user_uuid=user_uuid) + output_name_clean + '.mp4'
     video_local_path_file = video_local_path + image_name[:-4] + '_' + audio_name[:-4] + '.mp4'
     bucket.blob(video_fire_path).upload_from_filename(video_local_path_file)
     
