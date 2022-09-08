@@ -12,6 +12,11 @@ services:
       - "5000:80"
     depends_on:
       - redis_server
+    # labels:
+    #   - traefik.enable=true
+    #   - traefik.http.routers.app-http.rule=Host(`server.appliedhealthinformatics.com`)
+    #   - traefik.http.routers.app-http.tls=true
+    #   - traefik.http.routers.app-http.tls.certresolver=letsencrypt
   
   worker:
     build:
@@ -33,3 +38,18 @@ services:
       - "5555:5555"
     depends_on:
       - redis_server
+
+  # traefik:
+  #   image: traefik:v2.3
+  #   ports:
+  #     - 80:5000
+  #     - 443:443
+  #   restart: always
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock:ro
+  #     - $PWD/services/traefik/traefik.toml:/etc/traefik/traefik.toml
+  #     - traefik-public-certificates:/certificates
+
+
+  # the parts commented out currently: https://towardsdatascience.com/how-to-deploy-a-secure-api-with-fastapi-docker-and-traefik-b1ca065b100f 
+  # https://github.com/ahmedbesbes/fastapi-ssl/blob/main/docker-compose.yaml 
