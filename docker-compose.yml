@@ -8,9 +8,8 @@ services:
     environment:
       REDISSERVER: redis://redis_server:6379
       C_FORCE_ROOT: "true"
-    ports:
+    # ports:
       # - "5000:80"
-      - "80:80"
     depends_on:
       - redis_server
     labels:
