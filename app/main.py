@@ -31,8 +31,7 @@ origins = [
     "http://localhost:5555",
     "https://localhost:5555",
     "https://server.appliedhealthinformatics.com",
-    "https://clone.appliedhealthinformatics.com",
-    "*", 
+    "https://clone.appliedhealthinformatics.com"
 ]
 
 app = FastAPI()
