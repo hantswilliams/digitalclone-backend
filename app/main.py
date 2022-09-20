@@ -248,9 +248,9 @@ async def check_aws_batch_task(item: Item_GetTaskAWS):
     response_getstatus = awsBatch.describe_jobs(jobs=[jobArn])
     response_status = response_getstatus['jobs'][0]['status']
 
-    ## checking for errors 
-    print('response_getstatus: ' + response_getstatus)
-    print('response_status: ' + response_status)
+    # ## checking for errors 
+    # print('response_getstatus: ' + response_getstatus)
+    # print('response_status: ' + response_status)
 
     if response_status == 'SUCCEEDED' or response_status == 'FAILED':
         response_created = response_getstatus['jobs'][0]['createdAt']
