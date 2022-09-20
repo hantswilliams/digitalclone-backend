@@ -27,6 +27,9 @@ aws_jobs/a2h/digital-clone-saas-firebase-admin-sdk.json
 
 app/.env
 
+.env
+*.env
+
 *.DS_Store
 
 **/logs/**

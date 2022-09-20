@@ -1,7 +1,13 @@
 import boto3
 import time
 
-session = boto3.Session(profile_name='biovirtua', region_name='us-east-1')
+import os
+from dotenv import load_dotenv, dotenv_values
+
+config = dotenv_values(".env")
+
+# session = boto3.Session(profile_name='biovirtua', region_name='us-east-1')
+session = boto3.Session(aws_access_key_id=config['AWS_ACCESS_KEY'], aws_secret_access_key=config['AWS_SECRET_ACCESS_KEY'], region_name='us-east-1')
 awsBatch = session.client('batch')
 
 # list_jobs 
@@ -67,7 +73,11 @@ response_delta_created_readable = time.strftime("%H:%M:%S", time.gmtime(response
 
 
 
-
+response = awsBatch.list_jobs(
+    jobQueue='god8gpus',
+    jobStatus='SUCCEEDED',
+    maxResults=100
+)
 
 
 
