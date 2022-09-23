@@ -1,7 +1,5 @@
 aiofiles==0.5.0                     #part of original req file 
 fastapi==0.80.0                     #part of original req file was originally 0.60.1
-celery==4.4.7                       #part of original req file 
-redis==3.5.3                        #part of original req file 
 firebase-admin==5.2.0               #part of original req file 
 boto3==1.24.64                      #equivalent of celery, aws hosted 
 

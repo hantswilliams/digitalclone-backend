@@ -8,7 +8,6 @@ import time
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from worker import celery
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
@@ -80,35 +79,6 @@ class Item_GetTaskAWS(BaseModel):
 def read_root():
     return {"App": "Digital Clone", "Version": "1.0.0"}
     
-
-@app.post("/start-task/")
-async def create_item(item: Item_PostTask):
-    task_name = "hello.task"
-    user_uuid = item.user_uuid
-    task = celery.send_task(task_name, args=[item.input_string])
-    currentDateTime = datetime.now()
-    ## try to send to firestore
-    doc_ref = fs_db.collection('users').document(user_uuid).collection('tasks').document(task.id)
-    dataToSend = {u'task_id': task.id, u'input_param': item.input_string, u'task_status': u'pending', u'task_result': u'', u'task_error': u'', u'task_created_at': currentDateTime}
-    doc_ref.set(dataToSend)
-    return dict(id=task.id, userid=item.user_uuid, url='localhost:5000/check_task/' + user_uuid + '/{}'.format(task.id))
-
-
-@app.post("/start-task/video1/")
-async def create_item(item: Item_PostTask_Video1):
-    task_name = "video1.task"
-    user_uuid = item.user_uuid
-    task = celery.send_task(task_name, args=[item.user_uuid, item.image_url, item.audio_url, item.image_name, item.audio_name])
-    currentDateTime = datetime.now()
-    ## try to send to firestore
-    doc_ref = fs_db.collection('users').document(user_uuid).collection('tasks').document(task.id)
-    dataToSend = {u'task_id': task.id, u'input_param': 
-            {u'image_url': item.image_url, u'audio_url': item.audio_url, u'audio_name': item.audio_name, u'image_name': item.image_name}, 
-        u'task_status': u'pending', u'task_result': u'', u'task_error': u'', u'task_created_at': currentDateTime}
-    doc_ref.set(dataToSend)
-    return dict(id=task.id, userid=item.user_uuid, url='localhost:5000/check_task/' + user_uuid + '/{}'.format(task.id))
-
-
 @app.post("/start-task/aws-batch/video1/")
 async def aws_batch_job(item: Item_PostTask_VideoA1_AWS):
     currentDateTime = datetime.now()
@@ -175,67 +145,8 @@ async def aws_batch_job(item: Item_PostTask_VideoA1_AWS):
 
     return started_response
 
-
-
-
-
-# check task status by user_uuid and task_uuid and return result
-@app.get("/check_task/{user_uuid}/{task_uuid}")
-async def check_task(user_uuid, task_uuid):
-    user_uuid = user_uuid
-    id = task_uuid
-    task = celery.AsyncResult(id)
-
-    if task.state == 'SUCCESS':
-        taskFinishTime = task.date_done
-    else:
-        taskFinishTime = None
-
-    if task.state == 'SUCCESS':
-        response = {
-            'status': task.state,
-            'result': task.result,
-            'task_id': id,
-            'task_finished_at': taskFinishTime
-        }
-
-        taskid = id
-        doc_ref = fs_db.collection('users').document(user_uuid).collection('tasks').document(taskid)
-        dataToSend = {u'task_id': taskid, u'task_status': task.state, u'task_result': task.result, u'task_error': task.info, u'task_finished_at': taskFinishTime}
-        doc_ref.update(dataToSend)   
-
-    elif task.state == 'FAILURE':
-        response = json.loads(task.backend.get(task.backend.get_key_for_task(task.id)).decode('utf-8'))
-
-        del response['children']
-        del response['traceback']
-
-        taskid = id
-        doc_ref = fs_db.collection('users').document(user_uuid).collection('tasks').document(taskid)
-        dataToSend = {u'task_id': taskid, u'task_status': task.state, u'task_result': task.result, u'task_error': task.info, u'task_finished_at': taskFinishTime}
-        doc_ref.update(dataToSend)    
-
-    else:
-        response = {
-            'status': task.state,
-            'result': task.info,
-            'task_id': id,
-            'task_finished_at': '-'
-        }
-
-        taskid = id
-        doc_ref = fs_db.collection('users').document(user_uuid).collection('tasks').document(taskid)
-        dataToSend = {u'task_id': taskid, u'task_status': task.state, u'task_result': task.result, u'task_error': task.info, u'task_finished_at': taskFinishTime}
-        doc_ref.update(dataToSend)  
-
-    return response
-
-
-
-
 @app.post("/check_aws_batch_task")
 async def check_aws_batch_task(item: Item_GetTaskAWS):
-
     user_uuid = item.user_uuid
     id = item.task_uuid
     jobArn = item.job_arn
@@ -314,14 +225,6 @@ async def check_aws_batch_task(item: Item_GetTaskAWS):
     return response
 
 
-
-
-
-
-
-# check task status by user_uuid and task_uuid and return result
-@app.get("/check_task/aws-batch/{user_uuid}/{task_uuid}")
-async def check_task_awsbatch(user_uuid, task_uuid):
 
     user_uuid = user_uuid
     id = task_uuid
