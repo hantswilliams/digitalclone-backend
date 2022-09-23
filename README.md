@@ -1,5 +1,4 @@
-# Dockerized fastapi-celery
-
+# Slim backend for digital clone
 - Original repo for this: https://github.com/jitendrasinghiitg/docker-fastapi-celery/issues 
 - My FORKED version for this: https://github.com/hantswilliams/docker-fastapi-celery 
 
