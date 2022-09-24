@@ -264,8 +264,5 @@ async def get_random_sentance(random_count: str):
     df_sentance = sentances.sample(int(random_count))
     # convert the df sentances to dictionary
     df_sentances_dict = df_sentance.to_dict('records')
-    # convert the dictionary to json
-    df_sentances_json = json.dumps(df_sentances_dict)
-    # return the json
-    return df_sentances_json
+    return df_sentances_dict
 
