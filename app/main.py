@@ -261,8 +261,11 @@ async def get_sentance(sentance_list_id: str):
 
 @app.get("/sentances/list/random/{random_count}")
 async def get_random_sentance(random_count: str):
-    df_sentance = sentances.random(int(random_count))
+    df_sentance = sentances.sample(int(random_count))
     # convert the df sentances to dictionary
     df_sentances_dict = df_sentance.to_dict('records')
-    return df_sentances_dict
+    # convert the dictionary to json
+    df_sentances_json = json.dumps(df_sentances_dict)
+    # return the json
+    return df_sentances_json
 
