@@ -250,9 +250,9 @@ async def get_all_sentances():
     # convert the df sentances to dictionary
     df_sentances_dict = sentances.to_dict('records')
     # convert the dictionary to json
-    df_sentances_json = json.dumps(df_sentances_dict)
+    # df_sentances_json = json.dumps(df_sentances_dict)
     # return the json
-    return df_sentances_json
+    return df_sentances_dict
 
 @app.get("/sentances/list/{sentance_list_id}")
 async def get_sentance(sentance_list_id: str):
