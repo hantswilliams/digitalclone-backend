@@ -55,7 +55,7 @@ session = boto3.Session(aws_access_key_id=config['AWS_ACCESS_KEY'], aws_secret_a
 awsBatch = session.client('batch')
 
 # load example sentances
-sentances = pd.read_csv('voiceCloning/sentances/sentances.csv')
+sentances = pd.read_csv('./voiceCloning/sentances/sentances.csv')
 sentances['list'] = sentances['list'].astype(str)
 
 class Sentance(BaseModel):
