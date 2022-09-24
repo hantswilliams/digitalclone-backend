@@ -249,9 +249,6 @@ async def check_aws_batch_task(item: Item_GetTaskAWS):
 async def get_all_sentances():
     # convert the df sentances to dictionary
     df_sentances_dict = sentances.to_dict('records')
-    # convert the dictionary to json
-    # df_sentances_json = json.dumps(df_sentances_dict)
-    # return the json
     return df_sentances_dict
 
 @app.get("/sentances/list/{sentance_list_id}")
@@ -260,18 +257,12 @@ async def get_sentance(sentance_list_id: str):
     df_sentance = sentances[sentances['list'] == sentance_list_id]
     # convert the df sentances to dictionary
     df_sentances_dict = df_sentance.to_dict('records')
-    # convert the dictionary to json
-    df_sentances_json = json.dumps(df_sentances_dict)
-    # return the json
-    return df_sentances_json
+    return df_sentances_dict
 
 @app.get("/sentances/list/random/{random_count}")
 async def get_random_sentance(random_count: str):
     df_sentance = sentances.random(int(random_count))
     # convert the df sentances to dictionary
     df_sentances_dict = df_sentance.to_dict('records')
-    # convert the dictionary to json
-    df_sentances_json = json.dumps(df_sentances_dict)
-    # return the json
-    return df_sentances_json
+    return df_sentances_dict
 
