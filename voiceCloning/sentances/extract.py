@@ -37,6 +37,11 @@ df['senId'] = 'sn_' + (df.index + 1).astype(str)
 # remove all special characters from the sentance column
 df['sentance'] = df['sentance'].str.replace('[^\w\s]','')
 
+# create a new column that counts to 10 then resets to 1
+df['userFieldName'] = 'q' + (df.index % 10 + 1).astype(str)
+df['id'] = 'list' + (df['list']).astype(str) + '-' + 'q' + (df.index % 10 + 1).astype(str)
+
+
 # save the dataframe as sentances.csv
 df.to_csv('voiceCloning/sentances/sentances.csv', index=False)
 
