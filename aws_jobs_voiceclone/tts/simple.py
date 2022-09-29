@@ -6,17 +6,50 @@ from TTS.tts.utils.text.tokenizer import TTSTokenizer
 from TTS.tts.models.vits import Vits
 from trainer import Trainer, TrainerArgs
 
+########################################
+########################################
+########################################
+######## Local testing file ############
+########################################
+########################################
+########################################
 
 
 ###### defaults ######
 dataset_path = "/Users/hantswilliams/Documents/digitalclone-backend/aws_jobs_voiceclone/tts/testdatasets/audiofiles/"
 output_path = "/Users/hantswilliams/Documents/digitalclone-backend/aws_jobs_voiceclone/tts/testdatasets/trainoutput/"
 
-
 tpower = 1.3
 tpreemphasis = 0.98
 tdb = 20
 ######################
+
+## test of custom formatter 
+def formatter(root_path, manifest_file, **kwargs):  # pylint: disable=unused-argument
+    """Assumes each line as ```<filename>|<transcription>```
+    """
+    txt_file = os.path.join(root_path, manifest_file)
+    items = []
+    speaker_name = "user"
+    with open(txt_file, "r", encoding="utf-8") as ttf:
+        for line in ttf:
+            cols = line.split("|")
+            wav_file = os.path.join(root_path, "wavs", cols[0])
+            ## remove white space from right side of string wav_file
+            wav_file = wav_file.rstrip()
+            text = cols[1].rstrip() # the r.strip is for removing \n at the end of the line
+            # remove the first white space from text on the left
+            text = text.lstrip()
+            items.append({"text":text, "audio_file":wav_file, "speaker_name":speaker_name})
+    return items
+
+testFormatter = formatter(dataset_path, "metaData_list1_1664477023362.txt")
+
+    
+
+
+
+
 
 dataset_config = BaseDatasetConfig(
     name="ljspeech", meta_file_train="metadata.csv", path=os.path.join(output_path, dataset_path)
