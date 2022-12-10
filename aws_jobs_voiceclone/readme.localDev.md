@@ -13,9 +13,14 @@
 - right now, looks like need to run the wave files through FFMPEG to do some conversion, otherwise get a missing header error 
 - so inside the metaData_list1 right now, have added in `_mod` to the file names , need to automate that part later 
 
-# Without doctor 
+# Without doctor / NOT WORKING ON MY MAC PRO CURRENTLY 
 - created a virtual `env` in the folder - get this running
 - find where packages are in pyenv: 
     - `python -m site` - then look for the site-packages part 
 - to get rid of numpy/arrayobject.h missing: `export CFLAGS="-I /Users/hantswilliams/.pyenv/versions/3.10.0/lib/python3.10/site-packages/numpy/core/include/numpy $CFLAGS"`  
 - the requirements file for this is `requirements.dev.nodocker.txt`
+
+
+# Google colab 
+- there is a ipynb located inside of tts_tests 
+- you can upload that to goolge colab - make sure to select run with `GPU` - very fast for doing 100epochs in approx 15mins / still need to do testing 

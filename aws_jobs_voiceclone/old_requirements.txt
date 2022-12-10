@@ -1,4 +1,0 @@
-firebase-admin==5.2.0               #for getting download links/URLs of files to process
-Protobuf
-TTS==0.7.0                          #for text to speech
-
