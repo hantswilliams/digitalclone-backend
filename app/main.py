@@ -8,7 +8,6 @@ import time
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from worker import celery
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
@@ -19,6 +18,9 @@ from datetime import datetime
 
 import os
 from dotenv import load_dotenv, dotenv_values
+
+import pandas as pd
+import json
 
 config = dotenv_values(".env")
 
@@ -52,6 +54,14 @@ fs_db = firestore.client(app=fs_app)
 session = boto3.Session(aws_access_key_id=config['AWS_ACCESS_KEY'], aws_secret_access_key=config['AWS_SECRET_ACCESS_KEY'],region_name='us-east-1')
 awsBatch = session.client('batch')
 
+# load example sentances
+sentances = pd.read_csv('/voiceCloning/sentances/sentances.csv')
+sentances['list'] = sentances['list'].astype(str)
+
+class Sentance(BaseModel):
+    sentance: str
+    list: str
+
 class Item_PostTask(BaseModel):
     user_uuid: str
     input_string: str
@@ -81,33 +91,9 @@ def read_root():
     return {"App": "Digital Clone", "Version": "1.0.0"}
     
 
-@app.post("/start-task/")
-async def create_item(item: Item_PostTask):
-    task_name = "hello.task"
-    user_uuid = item.user_uuid
-    task = celery.send_task(task_name, args=[item.input_string])
-    currentDateTime = datetime.now()
-    ## try to send to firestore
-    doc_ref = fs_db.collection('users').document(user_uuid).collection('tasks').document(task.id)
-    dataToSend = {u'task_id': task.id, u'input_param': item.input_string, u'task_status': u'pending', u'task_result': u'', u'task_error': u'', u'task_created_at': currentDateTime}
-    doc_ref.set(dataToSend)
-    return dict(id=task.id, userid=item.user_uuid, url='localhost:5000/check_task/' + user_uuid + '/{}'.format(task.id))
-
-
-@app.post("/start-task/video1/")
-async def create_item(item: Item_PostTask_Video1):
-    task_name = "video1.task"
-    user_uuid = item.user_uuid
-    task = celery.send_task(task_name, args=[item.user_uuid, item.image_url, item.audio_url, item.image_name, item.audio_name])
-    currentDateTime = datetime.now()
-    ## try to send to firestore
-    doc_ref = fs_db.collection('users').document(user_uuid).collection('tasks').document(task.id)
-    dataToSend = {u'task_id': task.id, u'input_param': 
-            {u'image_url': item.image_url, u'audio_url': item.audio_url, u'audio_name': item.audio_name, u'image_name': item.image_name}, 
-        u'task_status': u'pending', u'task_result': u'', u'task_error': u'', u'task_created_at': currentDateTime}
-    doc_ref.set(dataToSend)
-    return dict(id=task.id, userid=item.user_uuid, url='localhost:5000/check_task/' + user_uuid + '/{}'.format(task.id))
-
+##### Endpoints related to digital cloning #####
+##### Endpoints related to digital cloning #####
+##### Endpoints related to digital cloning #####
 
 @app.post("/start-task/aws-batch/video1/")
 async def aws_batch_job(item: Item_PostTask_VideoA1_AWS):
@@ -175,67 +161,8 @@ async def aws_batch_job(item: Item_PostTask_VideoA1_AWS):
 
     return started_response
 
-
-
-
-
-# check task status by user_uuid and task_uuid and return result
-@app.get("/check_task/{user_uuid}/{task_uuid}")
-async def check_task(user_uuid, task_uuid):
-    user_uuid = user_uuid
-    id = task_uuid
-    task = celery.AsyncResult(id)
-
-    if task.state == 'SUCCESS':
-        taskFinishTime = task.date_done
-    else:
-        taskFinishTime = None
-
-    if task.state == 'SUCCESS':
-        response = {
-            'status': task.state,
-            'result': task.result,
-            'task_id': id,
-            'task_finished_at': taskFinishTime
-        }
-
-        taskid = id
-        doc_ref = fs_db.collection('users').document(user_uuid).collection('tasks').document(taskid)
-        dataToSend = {u'task_id': taskid, u'task_status': task.state, u'task_result': task.result, u'task_error': task.info, u'task_finished_at': taskFinishTime}
-        doc_ref.update(dataToSend)   
-
-    elif task.state == 'FAILURE':
-        response = json.loads(task.backend.get(task.backend.get_key_for_task(task.id)).decode('utf-8'))
-
-        del response['children']
-        del response['traceback']
-
-        taskid = id
-        doc_ref = fs_db.collection('users').document(user_uuid).collection('tasks').document(taskid)
-        dataToSend = {u'task_id': taskid, u'task_status': task.state, u'task_result': task.result, u'task_error': task.info, u'task_finished_at': taskFinishTime}
-        doc_ref.update(dataToSend)    
-
-    else:
-        response = {
-            'status': task.state,
-            'result': task.info,
-            'task_id': id,
-            'task_finished_at': '-'
-        }
-
-        taskid = id
-        doc_ref = fs_db.collection('users').document(user_uuid).collection('tasks').document(taskid)
-        dataToSend = {u'task_id': taskid, u'task_status': task.state, u'task_result': task.result, u'task_error': task.info, u'task_finished_at': taskFinishTime}
-        doc_ref.update(dataToSend)  
-
-    return response
-
-
-
-
 @app.post("/check_aws_batch_task")
 async def check_aws_batch_task(item: Item_GetTaskAWS):
-
     user_uuid = item.user_uuid
     id = item.task_uuid
     jobArn = item.job_arn
@@ -316,78 +243,28 @@ async def check_aws_batch_task(item: Item_GetTaskAWS):
 
 
 
+##### Endpoints related to retrieving sentances for voice cloning #####
+##### Endpoints related to retrieving sentances for voice cloning #####
+##### Endpoints related to retrieving sentances for voice cloning #####
 
+@app.get("/sentances")
+async def get_all_sentances():
+    # convert the df sentances to dictionary
+    df_sentances_dict = sentances.to_dict('records')
+    return df_sentances_dict
 
+@app.get("/sentances/list/{sentance_list_id}")
+async def get_sentance(sentance_list_id: str):
+    # keep only the sentance that matches the sentance_list_id
+    df_sentance = sentances[sentances['list'] == sentance_list_id]
+    # convert the df sentances to dictionary
+    df_sentances_dict = df_sentance.to_dict('records')
+    return df_sentances_dict
 
-# check task status by user_uuid and task_uuid and return result
-@app.get("/check_task/aws-batch/{user_uuid}/{task_uuid}")
-async def check_task_awsbatch(user_uuid, task_uuid):
+@app.get("/sentances/list/random/{random_count}")
+async def get_random_sentance(random_count: str):
+    df_sentance = sentances.sample(int(random_count))
+    # convert the df sentances to dictionary
+    df_sentances_dict = df_sentance.to_dict('records')
+    return df_sentances_dict
 
-    user_uuid = user_uuid
-    id = task_uuid
-
-    print('id provided: ' + id)
-    print('user_uuid provided: ' + user_uuid)
-
-    #### Get job status, times 
-    response_getstatus = awsBatch.describe_jobs(jobs=[id])
-    response_status = response_getstatus['jobs'][0]['status']
-    response_created = response_getstatus['jobs'][0]['createdAt']
-    response_started = response_getstatus['jobs'][0]['startedAt'] 
-    response_stopped = response_getstatus['jobs'][0]['stoppedAt']
-    # convert epoch time to readable time
-    response_created_readable = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(response_created))
-    response_started_readable = time.strftime("%a, %d %b %Y %H:%M:%S %Z", time.gmtime((response_started/1000)))
-    response_stopped_readable = time.strftime("%a, %d %b %Y %H:%M:%S %Z", time.gmtime((response_stopped/1000)))
-    # calculate delta between start and stop time in seconds 
-    response_delta = response_stopped - response_started
-    response_delta_readable = time.strftime("%H:%M:%S", time.gmtime(response_delta/1000))
-    # calculate delta between created and stop time in seconds 
-    response_delta_created = response_stopped - response_created
-    response_delta_created_readable = time.strftime("%H:%M:%S", time.gmtime(response_delta_created/1000))
-    
-    if response_status == 'SUCCEEDED':
-        taskFinishTime = response_stopped
-    else:
-        taskFinishTime = None
-
-    if response_status == 'SUCCEEDED':
-        response = {
-            'status': 'SUCCEEDED',
-            'task_id': id,
-            'task_finished_at': taskFinishTime,
-            'task_duration': response_delta_readable,
-            'task_duration_readable': response_delta_created_readable,
-            'response_created_readable': response_created_readable,
-            'response_started_readable': response_started_readable,
-            'response_stopped_readable': response_stopped_readable
-        }
-        doc_ref = fs_db.collection('users').document(user_uuid).collection('tasks-aws-batch').document(id)
-        dataToSend = {u'task_status': 'SUCCEEDED', u'task_finished_at': taskFinishTime, u'task_duration': response_delta_readable, 
-            u'task_duration_readable': response_delta_created_readable, u'response_created_readable': response_created_readable, 
-            u'response_started_readable': response_started_readable, u'response_stopped_readable': response_stopped_readable}
-        doc_ref.update(dataToSend)   
-
-    elif response_status == 'FAILED':
-        response = {
-            'status': 'FAILED',
-            'task_id': id,
-            'task_finished_at': '-'
-        }
-        doc_ref = fs_db.collection('users').document(user_uuid).collection('tasks-aws-batch').document(id)
-        dataToSend = {u'task_status': 'FAILED', u'task_finished_at': taskFinishTime, u'task_duration': response_delta_readable, 
-            u'task_duration_readable': response_delta_created_readable, u'response_created_readable': response_created_readable, 
-            u'response_started_readable': response_started_readable, u'response_stopped_readable': response_stopped_readable}
-        doc_ref.update(dataToSend)     
-
-    else:
-        response = {
-            'status': response_status,
-            'task_id': id,
-            'task_finished_at': '-'
-        }
-        doc_ref = fs_db.collection('users').document(user_uuid).collection('tasks-aws-batch').document(id)
-        dataToSend = {u'task_status': response_status}
-        doc_ref.update(dataToSend)  
-
-    return response

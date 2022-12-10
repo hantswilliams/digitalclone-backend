@@ -1,43 +1,14 @@
 version: "3.7"
-
 services:
   fastapi:
     build:
       context: .
       dockerfile: DockerfileWebApi
-    environment:
-      REDISSERVER: redis://redis_server:6379
-      C_FORCE_ROOT: "true"
-    # ports:
-      # - "5000:80"
-    depends_on:
-      - redis_server
     labels:
       - traefik.enable=true
       - traefik.http.routers.app-http.rule=Host(`server.appliedhealthinformatics.com`)
       - traefik.http.routers.app-http.tls=true
       - traefik.http.routers.app-http.tls.certresolver=letsencrypt
-  
-  worker:
-    build:
-      dockerfile: DockerfileCelery
-      context: .
-    environment:
-      REDISSERVER: redis://redis_server:6379
-      C_FORCE_ROOT: "true"
-    depends_on:
-      - redis_server
-  
-  redis_server:
-    image: redis
-
-  flower:
-    image: mher/flower
-    command: ["celery", "--broker=redis://redis_server:6379", "flower", "--port=5555"]
-    ports:
-      - "5555:5555"
-    depends_on:
-      - redis_server
 
   traefik:
     image: traefik:v2.3
