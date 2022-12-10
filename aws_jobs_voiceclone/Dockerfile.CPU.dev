@@ -1,0 +1,24 @@
+FROM ghcr.io/coqui-ai/tts-cpu
+
+LABEL maintainer "Hants Williams" 
+
+# update
+RUN apt-get update && apt-get upgrade -y
+
+# install sudo and nano
+RUN apt-get install sudo nano -y
+# RUN pip install "torchaudio<0.12.0"
+
+## install ffmpeg
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get install ffmpeg -y
+
+# copy over local testing files 
+COPY ./tts_tests /testfiles
+COPY ./yourtts-zeroshot /zeroshot
+
+# entry point
+ENTRYPOINT ["tts"]
+ARG CUDA_VISIBLE_DEVICES=0
+
+CMD ["--help"]

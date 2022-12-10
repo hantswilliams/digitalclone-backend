@@ -1,4 +1,5 @@
 import os
+
 from TTS.tts.configs.shared_configs import BaseDatasetConfig
 from TTS.config.shared_configs import BaseAudioConfig
 from TTS.utils.audio import AudioProcessor
@@ -21,8 +22,26 @@ from TTS.tts.datasets import load_tts_samples
 ###### defaults ######
 # dataset_path = "/Users/hantswilliams/Documents/digitalclone-backend/aws_jobs_voiceclone/tts/testdatasets/audiofiles/"
 # output_path = "/Users/hantswilliams/Documents/digitalclone-backend/aws_jobs_voiceclone/tts/testdatasets/trainoutput/"
-dataset_path = "/tts-custom/testdatasets/audiofiles"
-output_path = "/tts-custom/testdatasets/trainoutput"
+dataset_path = "/testfiles/testdatasets/audiofiles"
+output_path = "/testfiles/testdatasets/trainoutput"
+
+# get list of files in audiofiles/wavs
+audiofiles = os.listdir(dataset_path + "/wavs")
+# loop through each file in audiofiles/wavs and convert to 22050
+for file in audiofiles:
+    # get file name
+    filename = file.split(".")[0]
+    # get file extension
+    fileext = file.split(".")[1]
+    # create command to convert file to 22050
+    command = "ffmpeg -i " + dataset_path + "/wavs/" + file + " -ar 16000 -ac 1 " + dataset_path + "/wavs/" + filename + "_mod." + fileext + " -y"
+    # run command
+    os.system(command)
+    # print
+    print("converted " + file + " to 16000")
+
+
+
 
 
 tpower = 1.3

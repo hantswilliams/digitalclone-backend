@@ -1,0 +1,3 @@
+python-dev-tools
+numpy
+tts 
