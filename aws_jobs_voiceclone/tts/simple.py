@@ -4,7 +4,10 @@ from TTS.config.shared_configs import BaseAudioConfig
 from TTS.utils.audio import AudioProcessor
 from TTS.tts.utils.text.tokenizer import TTSTokenizer
 from TTS.tts.models.vits import Vits
+from TTS.tts.configs.vits_config import VitsConfig
 from trainer import Trainer, TrainerArgs
+from TTS.tts.datasets import load_tts_samples
+
 
 ########################################
 ########################################
@@ -16,43 +19,20 @@ from trainer import Trainer, TrainerArgs
 
 
 ###### defaults ######
-dataset_path = "/Users/hantswilliams/Documents/digitalclone-backend/aws_jobs_voiceclone/tts/testdatasets/audiofiles/"
-output_path = "/Users/hantswilliams/Documents/digitalclone-backend/aws_jobs_voiceclone/tts/testdatasets/trainoutput/"
+# dataset_path = "/Users/hantswilliams/Documents/digitalclone-backend/aws_jobs_voiceclone/tts/testdatasets/audiofiles/"
+# output_path = "/Users/hantswilliams/Documents/digitalclone-backend/aws_jobs_voiceclone/tts/testdatasets/trainoutput/"
+dataset_path = "/tts-custom/testdatasets/audiofiles"
+output_path = "/tts-custom/testdatasets/trainoutput"
+
 
 tpower = 1.3
 tpreemphasis = 0.98
 tdb = 20
 ######################
 
-## test of custom formatter 
-def formatter(root_path, manifest_file, **kwargs):  # pylint: disable=unused-argument
-    """Assumes each line as ```<filename>|<transcription>```
-    """
-    txt_file = os.path.join(root_path, manifest_file)
-    items = []
-    speaker_name = "user"
-    with open(txt_file, "r", encoding="utf-8") as ttf:
-        for line in ttf:
-            cols = line.split("|")
-            wav_file = os.path.join(root_path, "wavs", cols[0])
-            ## remove white space from right side of string wav_file
-            wav_file = wav_file.rstrip()
-            text = cols[1].rstrip() # the r.strip is for removing \n at the end of the line
-            # remove the first white space from text on the left
-            text = text.lstrip()
-            items.append({"text":text, "audio_file":wav_file, "speaker_name":speaker_name})
-    return items
-
-testFormatter = formatter(dataset_path, "metaData_list1_1664477023362.txt")
-
-    
-
-
-
-
 
 dataset_config = BaseDatasetConfig(
-    name="ljspeech", meta_file_train="metadata.csv", path=os.path.join(output_path, dataset_path)
+    name="ljspeech", meta_file_train='metaData_list1_1664477626975..txt', path=os.path.join(output_path, dataset_path)
 )
 
 audio_config = BaseAudioConfig(
@@ -91,9 +71,21 @@ config = VitsConfig(
     cudnn_benchmark=False
 )
 
+
+
+train_samples, eval_samples = load_tts_samples(
+    dataset_config,
+    eval_split=True,
+    eval_split_max_size=config.eval_split_max_size,
+    # eval_split_size=config.eval_split_size
+    eval_split_size=0.1
+)
+
 ap = AudioProcessor.init_from_config(config)
 tokenizer, config = TTSTokenizer.init_from_config(config)
 model = Vits(config, ap, tokenizer, speaker_manager=None)
+
+
 trainer = Trainer(
     TrainerArgs(), config, output_path, model=model, train_samples=train_samples, eval_samples=eval_samples
 )

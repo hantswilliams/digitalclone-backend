@@ -1,10 +1,10 @@
-list1-q1_1664299399500.wav | The birch canoe slid on the smooth planks 
-list1-q2_1664299434662.wav | Glue the sheet to the dark blue background 
-list1-q3_1664299442218.wav | Its easy to tell the depth of a well 
-list1-q4_1664299449480.wav | These days a chicken leg is a rare dish 
-list1-q5_1664299457270.wav | Rice is often served in round bowls 
-list1-q6_1664299464874.wav | The juice of lemons makes fine punch 
-list1-q7_1664299472544.wav | The box was thrown beside the parked truck 
-list1-q8_1664299479477.wav | The hogs were fed chopped corn and garbage 
-list1-q9_1664299487431.wav | Four hours of steady work faced us 
-list1-q10_1664299494437.wav | A large size in stockings is hard to sell 
+list1-q1_1664299399500 | blank | The birch canoe slid on the smooth planks 
+list1-q2_1664299434662 | blank | Glue the sheet to the dark blue background 
+list1-q3_1664299442218 | blank | Its easy to tell the depth of a well 
+list1-q4_1664299449480 | blank | These days a chicken leg is a rare dish 
+list1-q5_1664299457270 | blank | Rice is often served in round bowls 
+list1-q6_1664299464874 | blank | The juice of lemons makes fine punch 
+list1-q7_1664299472544 | blank | The box was thrown beside the parked truck 
+list1-q8_1664299479477 | blank | The hogs were fed chopped corn and garbage 
+list1-q9_1664299487431 | blank | Four hours of steady work faced us 
+list1-q10_1664299494437 | blank | A large size in stockings is hard to sell 

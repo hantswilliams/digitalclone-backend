@@ -62,9 +62,9 @@ def voiceClone():
     print('Temp directory:', '/tmp/' + user_uuid)
     print('Files in temp directory:', os.listdir('/tmp/' + user_uuid))
 
-    # create video from image and audio
-    # structure: audiofile, imagefile, model_path, save_path
-    mode_path = '/a2h/checkpoints/audio2head.pth.tar'
+    # # create video from image and audio
+    # # structure: audiofile, imagefile, model_path, save_path
+    # mode_path = '/a2h/checkpoints/audio2head.pth.tar'
 
     # run the actual model here
     # audio2head(audio_local_path, image_local_path, mode_path, video_local_path)
