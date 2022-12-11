@@ -23,4 +23,4 @@
 
 # Google colab 
 - there is a ipynb located inside of tts_tests 
-- you can upload that to goolge colab - make sure to select run with `GPU` - very fast for doing 100epochs in approx 15mins / still need to do testing 
+- you can upload that to goolge colab - make sure to select run with `GPU` - very fast for doing 100epochs in approx 10mins - about 1 epochs per 10 seconds / still need to do testing 
