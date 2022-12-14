@@ -100,7 +100,7 @@ def read_root():
 def download_audio(user_uuid: str):
     # get all the audio files in the user's folder/voice folder and download them as a zip file
     # get the user's folder
-    blobs = storage.bucket.list_blobs(prefix='users/' + user_uuid + '/voice/', app=fs_app)
+    blobs = list(storage.bucket.list_blobs(prefix='users/' + user_uuid + '/voice/', app=fs_app))
     # get the audio files
     audio_files = []
     for blob in blobs:
