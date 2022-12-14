@@ -7,10 +7,14 @@ import time
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+from firebase_admin import storage
+
+from zipfile import ZipFile
 
 import boto3
 
@@ -88,7 +92,37 @@ class Item_GetTaskAWS(BaseModel):
 
 @app.get("/")
 def read_root():
-    return {"App": "Digital Clone", "Version": "1.0.0"}
+    return {"App": "Digital Clone", "Version": "0.0.2"}
+
+
+### create a endpoint that downloads all audio files in a users firebase storage folder
+@app.get("/download-all-audio/{user_uuid}")
+def download_audio(user_uuid: str):
+    # get all the audio files in the user's folder/voice folder and download them as a zip file
+    # get the user's folder
+    blobs = storage.bucket.list_blobs(prefix='users/' + user_uuid + '/voice/', app=fs_app)
+    # get the audio files
+    audio_files = []
+    for blob in blobs:
+        if '.wav' in blob.name:
+            audio_files.append(blob.name)
+    # download the audio files
+    for audio_file in audio_files:
+        blob = storage.bucket.blob(audio_file, app=fs_app)
+        blob.download_to_filename(audio_file)
+    # use pythons built-in zip to zip the files
+    # use default python zip to zip the files
+    zipObj = ZipFile('audio.zip', 'w')
+    for audio_file in audio_files:
+        zipObj.write(audio_file)
+    zipObj.close()
+    # delete the audio files
+    for audio_file in audio_files:
+        os.remove(audio_file)
+    # return the zip file
+    return FileResponse('audio.zip')
+
+    
     
 
 ##### Endpoints related to digital cloning #####
