@@ -120,10 +120,8 @@ def download_audio(user_uuid: str):
 
     # use pythons built-in zip to zip all the files in app/temp as zip.zip
     with ZipFile('/app/temp/zip.zip', 'w') as zipObj:
-        for folderName, filenames in os.walk('/app/temp/'):
-            for filename in filenames:
-                filePath = os.path.join(folderName, filename)
-                zipObj.write(filePath, filename)
+        for i in audio_files_clean:
+            zipObj.write('/app/temp/' + i)
 
     # then delete the files in the temp folder except for the zip file
     for i in audio_files_clean:
