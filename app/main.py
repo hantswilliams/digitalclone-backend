@@ -119,7 +119,7 @@ def download_audio(user_uuid: str):
         print('downloaded ' + i)
 
     # use pythons built-in zip to zip all the files in app/temp as zip.zip
-    with ZipFile('app/temp/zip.zip', 'w') as zipObj:
+    with ZipFile('/app/temp/zip.zip', 'w') as zipObj:
         for folderName, filenames in os.walk('/app/temp/'):
             for filename in filenames:
                 filePath = os.path.join(folderName, filename)
