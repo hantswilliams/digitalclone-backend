@@ -7,6 +7,8 @@ aws_jobs_voiceclone/yourtts-zeroshot/files/SE_checkpoint.pth.tar
 
 digital-clone-saas-firebase-adminsdk-8s7c6-35294053d3.json
 */digital-clone-saas-firebase-adminsdk-8s7c6-35294053d3.json
+app/digital-clone-saas-firebase-adminsdk-dec2022.json
+app/service_account_dec2022.json
 
 celery/digital-clone-saas-firebase-admin-sdk.json
 *celery/digital-clone-saas-firebase-admin-sdk.json

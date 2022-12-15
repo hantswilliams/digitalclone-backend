@@ -4,6 +4,7 @@ import uuid
 from pydantic import BaseModel
 from typing import Union
 import time
+import os
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -54,6 +55,8 @@ app.add_middleware(
 cred = credentials.Certificate("digital-clone-saas-firebase-adminsdk-8s7c6-35294053d3.json")
 fs_app = firebase_admin.initialize_app(cred, name='fs_app')
 fs_db = firestore.client(app=fs_app)
+bucket_location = 'digital-clone-saas.appspot.com'
+bucket = storage.bucket(bucket_location, app=fs_app)
 
 session = boto3.Session(aws_access_key_id=config['AWS_ACCESS_KEY'], aws_secret_access_key=config['AWS_SECRET_ACCESS_KEY'],region_name='us-east-1')
 awsBatch = session.client('batch')
@@ -92,38 +95,37 @@ class Item_GetTaskAWS(BaseModel):
 
 @app.get("/")
 def read_root():
-    return {"App": "Digital Clone", "Version": "0.0.2"}
-
+    return {"App": "Digital Clone", "Version": "0.0.3"}
 
 ### create a endpoint that downloads all audio files in a users firebase storage folder
 @app.get("/download-all-audio/{user_uuid}")
 def download_audio(user_uuid: str):
-    # get all the audio files in the user's folder/voice folder and download them as a zip file
-    # get the user's folder
-    blobs = list(storage.bucket.list_blobs(prefix='users/' + user_uuid + '/voice/', app=fs_app))
-    # get the audio files
+    # get all files in the users folder
+    blobs = bucket.list_blobs(prefix='user/' + user_uuid + '/voice/')
     audio_files = []
     for blob in blobs:
+        print(blob.name)
         if '.wav' in blob.name:
             audio_files.append(blob.name)
-    # download the audio files
-    for audio_file in audio_files:
-        blob = storage.bucket.blob(audio_file, app=fs_app)
-        blob.download_to_filename(audio_file)
-    # use pythons built-in zip to zip the files
-    # use default python zip to zip the files
-    zipObj = ZipFile('audio.zip', 'w')
-    for audio_file in audio_files:
-        zipObj.write(audio_file)
-    zipObj.close()
-    # delete the audio files
-    for audio_file in audio_files:
-        os.remove(audio_file)
-    # return the zip file
-    return FileResponse('audio.zip')
 
-    
-    
+    # just keep characters after the final / in the file name
+    audio_files_clean = [x.split('/')[-1] for x in audio_files]
+
+    # download the audio files locally in working directory
+    for i in audio_files_clean:
+        blob = bucket.blob('user/' + user_uuid + '/voice/' + i)
+        blob.download_to_filename('app/temp/' + i)
+
+    # use pythons built-in zip to zip all the files in app/temp as zip.zip
+    with ZipFile('app/temp/zip.zip', 'w') as zipObj:
+        for folderName, filenames in os.walk('app/temp'):
+            for filename in filenames:
+                filePath = os.path.join(folderName, filename)
+                zipObj.write(filePath, filename)
+
+    # return the zip file
+    return FileResponse('app/temp/zip.zip', media_type='application/zip', filename='zip.zip')
+
 
 ##### Endpoints related to digital cloning #####
 ##### Endpoints related to digital cloning #####
