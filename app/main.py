@@ -118,10 +118,6 @@ def download_audio(user_uuid: str):
         blob.download_to_filename('/app/temp/' + i)
         print('downloaded ' + i)
 
-    # create a new blank zip file inside /app/temp
-    with open('/app/temp/zip.zip', 'w') as f:
-        pass
-    
     # use pythons built-in zip to zip all the files in app/temp as zip.zip
     with ZipFile('/app/temp/zip.zip', 'w') as zipObj:
         for i in audio_files_clean:
@@ -132,7 +128,7 @@ def download_audio(user_uuid: str):
         os.remove('/app/temp/' + i)
         
     # return the zip file
-    return FileResponse('app/temp/zip.zip', media_type='application/zip', filename='zip.zip')
+    return FileResponse('/app/temp/zip.zip', media_type='application/zip', filename='zip.zip')
 
 
 
