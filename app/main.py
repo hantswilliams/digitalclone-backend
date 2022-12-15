@@ -114,18 +114,25 @@ def download_audio(user_uuid: str):
     # download the audio files locally in working directory
     for i in audio_files_clean:
         blob = bucket.blob('user/' + user_uuid + '/voice/' + i)
-        blob.download_to_filename('app/temp/' + i)
+        # blob.download_to_filename('aws_jobs_voiceclone/tts_tests/testdata2/raw/' + i)
+        blob.download_to_filename('/app/temp/' + i)
         print('downloaded ' + i)
 
     # use pythons built-in zip to zip all the files in app/temp as zip.zip
     with ZipFile('app/temp/zip.zip', 'w') as zipObj:
-        for folderName, filenames in os.walk('app/temp/'):
+        for folderName, filenames in os.walk('/app/temp/'):
             for filename in filenames:
                 filePath = os.path.join(folderName, filename)
                 zipObj.write(filePath, filename)
 
+    # then delete the files in the temp folder except for the zip file
+    for i in audio_files_clean:
+        os.remove('/app/temp/' + i)
+        
     # return the zip file
     return FileResponse('app/temp/zip.zip', media_type='application/zip', filename='zip.zip')
+
+
 
 
 ##### Endpoints related to digital cloning #####
