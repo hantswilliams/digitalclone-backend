@@ -114,7 +114,6 @@ def download_audio(user_uuid: str):
     # download the audio files locally in working directory
     for i in audio_files_clean:
         blob = bucket.blob('user/' + user_uuid + '/voice/' + i)
-        # blob.download_to_filename('aws_jobs_voiceclone/tts_tests/testdata2/raw/' + i)
         blob.download_to_filename('/app/temp/' + i)
         print('downloaded ' + i)
 
