@@ -2,6 +2,10 @@
 - Original repo for this: https://github.com/jitendrasinghiitg/docker-fastapi-celery/issues 
 - My FORKED version for this: https://github.com/hantswilliams/docker-fastapi-celery 
 
+## Quick run with app/fastAPI only
+- go into /app folder and do: 
+  - `uvicorn main:app --reload`
+
 ## Docker deployment 
 - If doing locally, I shade to increase/change my system parameters to: memory swap: 2.5gb, CPUs: 6, Memory: 4gb 
 - Will likely run into deployment issues if these settings are not appropaitely set 

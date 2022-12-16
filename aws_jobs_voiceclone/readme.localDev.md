@@ -8,6 +8,9 @@
 - Once instide of the docker image, can get a server going with gui: 
     - `python3 TTS/server/server.py --model_name tts_models/en/vctk/vits` 
 - Then go inside the container and run `CUDA_VISIBLE_DEVICES=0 python /testfiles/simple.py`
+- One shot: 
+    - installing models: 
+    - `tts --text "hello" --model_name tts/models/multilingual/multi-dataset/your_tts --speaker_wav list1-q2_1664299434662.wav --language_idx "en"` 
 
 ## Notes 
 - right now, looks like need to run the wave files through FFMPEG to do some conversion, otherwise get a missing header error 
