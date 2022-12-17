@@ -1,90 +1,90 @@
-list1-q1_1671048670269 | blank | The birch canoe slid on the smooth planks. 
-list1-q2_1671048674867 | blank | Glue the sheet to the dark blue background. 
-list1-q3_1671048679438 | blank | Its easy to tell the depth of a well. 
-list1-q4_1671048684115 | blank | These days a chicken leg is a rare dish. 
-list1-q5_1671048689804 | blank | Rice is often served in round bowls. 
-list1-q6_1671048694496 | blank | The juice of lemons makes fine punch. 
-list1-q7_1671048699715 | blank | The box was thrown beside the parked truck. 
-list1-q8_1671048704560 | blank | The hogs were fed chopped corn and garbage. 
-list1-q9_1671048709584 | blank | Four hours of steady work faced us. 
-list1-q10_1671048714844 | blank | A large size in stockings is hard to sell. 
-list2-q1_1671048608899 | blank | The boy was there when the sun rose. 
-list2-q2_1671048613796 | blank | A rod is used to catch pink salmon. 
-list2-q3_1671048619283 | blank | The source of the huge river is the clear spring. 
-list2-q4_1671048624226 | blank | Kick the ball straight and follow through. 
-list2-q5_1671048628968 | blank | Help the woman get back to her feet. 
-list2-q6_1671048634089 | blank | A pot of tea helps to pass the evening. 
-list2-q7_1671048639737 | blank | Smoky fires lack flame and heat. 
-list2-q8_1671048645021 | blank | The soft cushion broke the mans fall. 
-list2-q9_1671048650200 | blank | The salt breeze came across from the sea. 
-list2-q10_1671048659992 | blank | The girl at the booth sold fifty bonds. 
-list3-q1_1671048544906 | blank | The small pup gnawed a hole in the sock. 
-list3-q2_1671048550054 | blank | The fish twisted and turned on the bent hook. 
-list3-q3_1671048556054 | blank | Press the pants and sew a button on the vest. 
-list3-q4_1671048565887 | blank | The swan dive was far short of perfect. 
-list3-q5_1671048571106 | blank | The beauty of the view stunned the young boy. 
-list3-q6_1671048576082 | blank | Two blue fish swam in the tank. 
-list3-q7_1671048581331 | blank | Her purse was full of useless trash. 
-list3-q8_1671048586858 | blank | The colt reared and threw the tall rider. 
-list3-q9_1671048592548 | blank | It snowed rained and hailed the same morning. 
-list3-q10_1671048597830 | blank | Read verse out loud for pleasure. 
-list4-q1_1671048490053 | blank | Hoist the load to your left shoulder. 
-list4-q2_1671048494898 | blank | Take the winding path to reach the lake. 
-list4-q3_1671048499833 | blank | Note closely the size of the gas tank. 
-list4-q4_1671048504109 | blank | Wipe the grease off his dirty face. 
-list4-q5_1671048508739 | blank | Mend the coat before you go out. 
-list4-q6_1671048513802 | blank | The wrist was badly strained and hung limp. 
-list4-q7_1671048518891 | blank | The stray cat gave birth to kittens. 
-list4-q8_1671048523723 | blank | The young girl gave no clear response. 
-list4-q9_1671048528487 | blank | The meal was cooked before the bell rang. 
-list4-q10_1671048532914 | blank | What joy there is in living. 
-list5-q1_1671048425822 | blank | A king ruled the state in the early days. 
-list5-q2_1671048431591 | blank | The ship was torn apart on the sharp reef. 
-list5-q3_1671048436469 | blank | Sickness kept him home the third week. 
-list5-q4_1671048441252 | blank | The wide road shimmered in the hot sun. 
-list5-q5_1671048450103 | blank | The lazy cow lay in the cool grass. 
-list5-q6_1671048454713 | blank | Lift the square stone over the fence. 
-list5-q7_1671048460304 | blank | The rope will bind the seven books at once. 
-list5-q8_1671048464836 | blank | Hop over the fence and plunge in. 
-list5-q9_1671048469754 | blank | The friendly gang left the drug store. 
-list5-q10_1671048474489 | blank | Mesh wire keeps chicks inside. 
-list6-q1_1671048341158 | blank | The frosty air passed through the coat. 
-list6-q2_1671048346374 | blank | The crooked maze failed to fool the mouse. 
-list6-q3_1671048363261 | blank | Adding fast leads to wrong sums. 
-list6-q4_1671048372452 | blank | The show was a flop from the very start. 
-list6-q5_1671048377678 | blank | A saw is a tool used for making boards. 
-list6-q6_1671048382963 | blank | The wagon moved on well oiled wheels. 
-list6-q7_1671048392749 | blank | March the soldiers past the next hill. 
-list6-q8_1671048402936 | blank | A cup of sugar makes sweet fudge. 
-list6-q9_1671048409071 | blank | Place a rosebush near the porch steps. 
-list6-q10_1671048414404 | blank | Both lost their lives in the raging storm. 
-list7-q1_1671048277653 | blank | We talked of the side show in the circus. 
-list7-q2_1671048283567 | blank | Use a pencil to write the first draft. 
-list7-q3_1671048289013 | blank | He ran half way to the hardware store. 
-list7-q4_1671048294544 | blank | The clock struck to mark the third period. 
-list7-q5_1671048299610 | blank | A small creek cut across the field. 
-list7-q6_1671048305656 | blank | Cars and busses stalled in snow drifts. 
-list7-q7_1671048312079 | blank | The set of china hit the floor with a crash. 
-list7-q8_1671048317827 | blank | This is a grand season for hikes on the road. 
-list7-q9_1671048323379 | blank | The dune rose from the edge of the water. 
-list7-q10_1671048329197 | blank | Those words were the cue for the actor to leave. 
-list8-q1_1671048198938 | blank | A yacht slid around the point into the bay. 
-list8-q2_1671048204618 | blank | The two met while playing on the sand. 
-list8-q3_1671048214796 | blank | The ink stain dried on the finished page. 
-list8-q4_1671048220444 | blank | The walled town was seized without a fight. 
-list8-q5_1671048226434 | blank | The lease ran out in sixteen weeks. 
-list8-q6_1671048231668 | blank | A tame squirrel makes a nice pet. 
-list8-q7_1671048237657 | blank | The horn of the car woke the sleeping cop. 
-list8-q8_1671048249486 | blank | The heart beat strongly and with firm strokes. 
-list8-q9_1671048256489 | blank | The pearl was worn in a thin silver ring. 
-list8-q10_1671048262306 | blank | The fruit peel was cut in thick slices. 
-list9-q1_1671048110495 | blank | The Navy attacked the big task force. 
-list9-q2_1671048126153 | blank | See the cat glaring at the scared mouse. 
-list9-q3_1671048131818 | blank | There are more than two factors here. 
-list9-q4_1671048138137 | blank | The hat brim was wide and too droopy. 
-list9-q5_1671048143792 | blank | The lawyer tried to lose his case. 
-list9-q6_1671048149356 | blank | The grass curled around the fence post. 
-list9-q7_1671048154458 | blank | Cut the pie into large parts. 
-list9-q8_1671048159979 | blank | Men strive but seldom get rich. 
-list9-q9_1671048170127 | blank | Always close the barn door tight. 
-list9-q10_1671048175898 | blank | He lay prone and hardly moved a limb. 
+list1-q1_1671048670269| blank | The birch canoe slid on the smooth planks. 
+list1-q2_1671048674867| blank | Glue the sheet to the dark blue background. 
+list1-q3_1671048679438| blank | Its easy to tell the depth of a well. 
+list1-q4_1671048684115| blank | These days a chicken leg is a rare dish. 
+list1-q5_1671048689804| blank | Rice is often served in round bowls. 
+list1-q6_1671048694496| blank | The juice of lemons makes fine punch. 
+list1-q7_1671048699715| blank | The box was thrown beside the parked truck. 
+list1-q8_1671048704560| blank | The hogs were fed chopped corn and garbage. 
+list1-q9_1671048709584| blank | Four hours of steady work faced us. 
+list1-q10_1671048714844| blank | A large size in stockings is hard to sell. 
+list2-q1_1671048608899| blank | The boy was there when the sun rose. 
+list2-q2_1671048613796| blank | A rod is used to catch pink salmon. 
+list2-q3_1671048619283| blank | The source of the huge river is the clear spring. 
+list2-q4_1671048624226| blank | Kick the ball straight and follow through. 
+list2-q5_1671048628968| blank | Help the woman get back to her feet. 
+list2-q6_1671048634089| blank | A pot of tea helps to pass the evening. 
+list2-q7_1671048639737| blank | Smoky fires lack flame and heat. 
+list2-q8_1671048645021| blank | The soft cushion broke the mans fall. 
+list2-q9_1671048650200| blank | The salt breeze came across from the sea. 
+list2-q10_1671048659992| blank | The girl at the booth sold fifty bonds. 
+list3-q1_1671048544906| blank | The small pup gnawed a hole in the sock. 
+list3-q2_1671048550054| blank | The fish twisted and turned on the bent hook. 
+list3-q3_1671048556054| blank | Press the pants and sew a button on the vest. 
+list3-q4_1671048565887| blank | The swan dive was far short of perfect. 
+list3-q5_1671048571106| blank | The beauty of the view stunned the young boy. 
+list3-q6_1671048576082| blank | Two blue fish swam in the tank. 
+list3-q7_1671048581331| blank | Her purse was full of useless trash. 
+list3-q8_1671048586858| blank | The colt reared and threw the tall rider. 
+list3-q9_1671048592548| blank | It snowed rained and hailed the same morning. 
+list3-q10_1671048597830| blank | Read verse out loud for pleasure. 
+list4-q1_1671048490053| blank | Hoist the load to your left shoulder. 
+list4-q2_1671048494898| blank | Take the winding path to reach the lake. 
+list4-q3_1671048499833| blank | Note closely the size of the gas tank. 
+list4-q4_1671048504109| blank | Wipe the grease off his dirty face. 
+list4-q5_1671048508739| blank | Mend the coat before you go out. 
+list4-q6_1671048513802| blank | The wrist was badly strained and hung limp. 
+list4-q7_1671048518891| blank | The stray cat gave birth to kittens. 
+list4-q8_1671048523723| blank | The young girl gave no clear response. 
+list4-q9_1671048528487| blank | The meal was cooked before the bell rang. 
+list4-q10_1671048532914| blank | What joy there is in living. 
+list5-q1_1671048425822| blank | A king ruled the state in the early days. 
+list5-q2_1671048431591| blank | The ship was torn apart on the sharp reef. 
+list5-q3_1671048436469| blank | Sickness kept him home the third week. 
+list5-q4_1671048441252| blank | The wide road shimmered in the hot sun. 
+list5-q5_1671048450103| blank | The lazy cow lay in the cool grass. 
+list5-q6_1671048454713| blank | Lift the square stone over the fence. 
+list5-q7_1671048460304| blank | The rope will bind the seven books at once. 
+list5-q8_1671048464836| blank | Hop over the fence and plunge in. 
+list5-q9_1671048469754| blank | The friendly gang left the drug store. 
+list5-q10_1671048474489| blank | Mesh wire keeps chicks inside. 
+list6-q1_1671048341158| blank | The frosty air passed through the coat. 
+list6-q2_1671048346374| blank | The crooked maze failed to fool the mouse. 
+list6-q3_1671048363261| blank | Adding fast leads to wrong sums. 
+list6-q4_1671048372452| blank | The show was a flop from the very start. 
+list6-q5_1671048377678| blank | A saw is a tool used for making boards. 
+list6-q6_1671048382963| blank | The wagon moved on well oiled wheels. 
+list6-q7_1671048392749| blank | March the soldiers past the next hill. 
+list6-q8_1671048402936| blank | A cup of sugar makes sweet fudge. 
+list6-q9_1671048409071| blank | Place a rosebush near the porch steps. 
+list6-q10_1671048414404| blank | Both lost their lives in the raging storm. 
+list7-q1_1671048277653| blank | We talked of the side show in the circus. 
+list7-q2_1671048283567| blank | Use a pencil to write the first draft. 
+list7-q3_1671048289013| blank | He ran half way to the hardware store. 
+list7-q4_1671048294544| blank | The clock struck to mark the third period. 
+list7-q5_1671048299610| blank | A small creek cut across the field. 
+list7-q6_1671048305656| blank | Cars and busses stalled in snow drifts. 
+list7-q7_1671048312079| blank | The set of china hit the floor with a crash. 
+list7-q8_1671048317827| blank | This is a grand season for hikes on the road. 
+list7-q9_1671048323379| blank | The dune rose from the edge of the water. 
+list7-q10_1671048329197| blank | Those words were the cue for the actor to leave. 
+list8-q1_1671048198938| blank | A yacht slid around the point into the bay. 
+list8-q2_1671048204618| blank | The two met while playing on the sand. 
+list8-q3_1671048214796| blank | The ink stain dried on the finished page. 
+list8-q4_1671048220444| blank | The walled town was seized without a fight. 
+list8-q5_1671048226434| blank | The lease ran out in sixteen weeks. 
+list8-q6_1671048231668| blank | A tame squirrel makes a nice pet. 
+list8-q7_1671048237657| blank | The horn of the car woke the sleeping cop. 
+list8-q8_1671048249486| blank | The heart beat strongly and with firm strokes. 
+list8-q9_1671048256489| blank | The pearl was worn in a thin silver ring. 
+list8-q10_1671048262306| blank | The fruit peel was cut in thick slices. 
+list9-q1_1671048110495| blank | The Navy attacked the big task force. 
+list9-q2_1671048126153| blank | See the cat glaring at the scared mouse. 
+list9-q3_1671048131818| blank | There are more than two factors here. 
+list9-q4_1671048138137| blank | The hat brim was wide and too droopy. 
+list9-q5_1671048143792| blank | The lawyer tried to lose his case. 
+list9-q6_1671048149356| blank | The grass curled around the fence post. 
+list9-q7_1671048154458| blank | Cut the pie into large parts. 
+list9-q8_1671048159979| blank | Men strive but seldom get rich. 
+list9-q9_1671048170127| blank | Always close the barn door tight. 
+list9-q10_1671048175898| blank | He lay prone and hardly moved a limb. 
