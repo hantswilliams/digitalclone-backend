@@ -63,6 +63,10 @@ list2['sentance'] = list2['sentance'].str.replace('[^\w\s]','')
 # create a new column that counts to 10 then resets to 1
 list2['userFieldName'] = 'q' + (list2.index % 10 + 1).astype(str)
 list2['id'] = 'list' + (list2['list']).astype(str) + '-' + 'q' + (list2.index % 10 + 1).astype(str)
+# drop rows with missing values
+print('length of list2 before drops: ', len(list2))
+list2 = list2.dropna()
+print('length of list2 with drops: ', len(list2))
 # save the dataframe as sentances.csv
 list2.to_csv('voiceCloning/sentances/sentances2.csv', index=False)
 
@@ -71,3 +75,5 @@ list2.to_csv('voiceCloning/sentances/sentances2.csv', index=False)
 df = pd.concat([df, list2], ignore_index=True)
 ### save the dataframe as sentances.csv
 df.to_csv('voiceCloning/sentances/sentances3.csv', index=False)
+
+
