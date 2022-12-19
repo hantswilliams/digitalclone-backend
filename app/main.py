@@ -95,7 +95,7 @@ class Item_GetTaskAWS(BaseModel):
 
 @app.get("/")
 def read_root():
-    return {"App": "Digital Clone", "Version": "0.0.3"}
+    return {"App": "Digital Clone", "Version": "0.0.4"}
 
 ### create a endpoint that downloads all audio files in a users firebase storage folder
 @app.get("/download-all-audio/{user_uuid}")
