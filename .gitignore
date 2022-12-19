@@ -5,6 +5,11 @@ aws_jobs_voiceclone/yourtts-zeroshot/files/best_model_latest.pth.tar
 aws_jobs_voiceclone/yourtts-zeroshot/files/SE_checkpoint.pth.tar
 
 
+aws_jobs_voiceclone/tts_tests/testdata2/clean_quality/p1_convert
+aws_jobs_voiceclone/tts_tests/testdata2/clean_quality/p2_silence
+aws_jobs_voiceclone/tts_tests/testdata2/clean_quality/p3_noise
+
+
 digital-clone-saas-firebase-adminsdk-8s7c6-35294053d3.json
 */digital-clone-saas-firebase-adminsdk-8s7c6-35294053d3.json
 app/digital-clone-saas-firebase-adminsdk-dec2022.json
