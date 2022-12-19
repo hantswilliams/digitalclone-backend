@@ -5,6 +5,9 @@ import os
 from aws_jobs_voiceclone.qualityChecks.silenceremove import read_wave, write_wave, frame_generator, vad_collector
 import webrtcvad
 import shutil
+import noisereduce as nr
+from scipy.io import wavfile
+
 
 ### TO DO: look at NOISEREDUCE - https://github.com/timsainb/noisereduce
 ## specifically the non-static noise reducer 
@@ -50,16 +53,38 @@ def silence_remover(intput_file, output_path):
     print("----------After Conversion--------")
     print("Length of audio is: ", len(joinedaudio))
 
+
+def background_noisereduct(input_file, output_path):
+    # load data
+    rate, data = wavfile.read(input_file)
+    # perform noise reduction
+    reduced_noise = nr.reduce_noise(y=data, sr=rate)
+    ## modify filename to include _bknoise at the end
+    filename = input_file.split("/")[-1]
+    filename = filename.split(".")[0] + "_bknoise.wav"
+    ## save path
+    filename = os.path.join(output_path, filename)
+    wavfile.write(filename, rate, reduced_noise)
+    ## print 
+    print('Noise reduced file saved at', filename)
+
+
+
+
+
+
 ### get list of all files in aws_jobs_voiceclone/tts_tests/testdata2/raw/ that end with .wav
 source = "aws_jobs_voiceclone/tts_tests/testdata2/raw/"
 files = os.listdir(source)
 files = [f for f in files if f.endswith(".wav")]
 
+####### STEP 1 - CONVERTING TO 16 BIT  
 ### loop through files and convert them to 16k, 1 channel, 16 bit
 for f in files:
     loadFile = AudioSegment.from_file(os.path.join(source, f))
     file_converter(loadFile, os.path.join(source, f), "aws_jobs_voiceclone/tts_tests/testdata2/clean_quality/p1_convert")
 
+####### STEP 2 - REMOVING SILENCE 
 ### loop through files and remove silence
 source = "aws_jobs_voiceclone/tts_tests/testdata2/clean_quality/p1_convert/"
 files = os.listdir(source)
@@ -67,8 +92,31 @@ files = [f for f in files if f.endswith(".wav")]
 for f in files:
     silence_remover(os.path.join(source, f), "aws_jobs_voiceclone/tts_tests/testdata2/clean_quality/p2_silence")
 
-### get all files from p2_silence folder and make a copy of them into wavs folder
-source = "aws_jobs_voiceclone/tts_tests/testdata2/clean_quality/p2_silence"
+####### STEP 3 - NOISE REDUCTION
+##### background noise removed
+source = "aws_jobs_voiceclone/tts_tests/testdata2/clean_quality/p2_silence/"
+files = os.listdir(source)
+files = [f for f in files if f.endswith(".wav")]
+for f in files:
+    background_noisereduct(os.path.join(source, f), "aws_jobs_voiceclone/tts_tests/testdata2/clean_quality/p3_noise")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### get all files from p3_noise folder and make a copy of them into wavs folder
+source = "aws_jobs_voiceclone/tts_tests/testdata2/clean_quality/p3_noise"
 destination = "aws_jobs_voiceclone/tts_tests/testdata2/clean_quality/wavs"
 files = os.listdir(source)
 files = [f for f in files if f.endswith(".wav")]
@@ -80,5 +128,5 @@ source = "aws_jobs_voiceclone/tts_tests/testdata2/clean_quality/wavs"
 files = os.listdir(source)
 files = [f for f in files if f.endswith(".wav")]
 for f in files:
-    os.rename(os.path.join(source, f), os.path.join(source, f.replace("_mod_nosilence", ""))) 
+    os.rename(os.path.join(source, f), os.path.join(source, f.replace("_mod_nosilence_bknoise", ""))) 
 
