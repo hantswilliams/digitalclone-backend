@@ -320,6 +320,6 @@ async def get_all_sentances():
 @app.get("/sentances_v2")
 async def get_all_sentances():
     # convert the df sentances to dictionary
-    sentances = pd.read_csv('/voiceCloning/sentances/sentances_v2.csv')
+    sentances = pd.read_csv('/voiceCloning/sentances/sentances2.csv')
     df_sentances_dict = sentances.to_dict('records')
     return df_sentances_dict
