@@ -58,8 +58,8 @@ list2['list'] = list2.index // 10
 list2['list'] = list2['list'] + 200
 # create a new ID variable called senId and assign sen_ to each row starting at 1
 list2['senId'] = 'sn_' + (list2.index + 1).astype(str)
-# remove all special characters from the sentance column
-# list2['transcript_clean'] = list2['transcript_clean'].str.replace('[^\w\s]','')
+# remove all special characters from the sentance column /// need this for json parsing API 
+list2['transcript_clean'] = list2['transcript_clean'].str.replace('[^\w\s]','')
 # create a new column that counts to 10 then resets to 1
 list2['userFieldName'] = 'q' + (list2.index % 10 + 1).astype(str)
 list2['id'] = 'list' + (list2['list']).astype(str) + '-' + 'q' + (list2.index % 10 + 1).astype(str)
