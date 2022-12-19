@@ -1,7 +1,7 @@
 import pandas as pd 
 import urllib
 import bs4
-
+import json
 
 # contains 72 lists 
 
@@ -59,11 +59,10 @@ list2['list'] = list2['list'] + 200
 # create a new ID variable called senId and assign sen_ to each row starting at 1
 list2['senId'] = 'sn_' + (list2.index + 1).astype(str)
 # remove all special characters from the sentance column /// need this for json parsing API 
-list2['transcript_clean'] = list2['transcript_clean'].str.replace('[^\w\s]','')
+list2['sentance'] = list2['sentance'].str.replace('[^\w\s]','')
 # create a new column that counts to 10 then resets to 1
 list2['userFieldName'] = 'q' + (list2.index % 10 + 1).astype(str)
 list2['id'] = 'list' + (list2['list']).astype(str) + '-' + 'q' + (list2.index % 10 + 1).astype(str)
-
 # save the dataframe as sentances.csv
 list2.to_csv('voiceCloning/sentances/sentances2.csv', index=False)
 
