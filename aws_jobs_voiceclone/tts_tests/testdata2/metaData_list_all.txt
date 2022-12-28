@@ -8,7 +8,7 @@ list1-q7_1671048699715|The box was thrown beside the parked truck.|The box was t
 list1-q8_1671048704560|The hogs were fed chopped corn and garbage.|The hogs were fed chopped corn and garbage. 
 list1-q9_1671048709584|Four hours of steady work faced us.|Four hours of steady work faced us. 
 list1-q10_1671048714844|A large size in stockings is hard to sell.|A large size in stockings is hard to sell. 
-list2-q1_1671048608899|The boy was there when the sun rose.|The boy was there when the sun rose. 
+list2-q10_1671048659992|The boy was there when the sun rose.|The boy was there when the sun rose. 
 list2-q2_1671048613796|A rod is used to catch pink salmon.|A rod is used to catch pink salmon. 
 list2-q3_1671048619283|The source of the huge river is the clear spring.|The source of the huge river is the clear spring. 
 list2-q4_1671048624226|Kick the ball straight and follow through.|Kick the ball straight and follow through. 
@@ -28,7 +28,7 @@ list3-q7_1671048581331|Her purse was full of useless trash.|Her purse was full o
 list3-q8_1671048586858|The colt reared and threw the tall rider.|The colt reared and threw the tall rider. 
 list3-q9_1671048592548|It snowed rained and hailed the same morning.|It snowed rained and hailed the same morning. 
 list3-q10_1671048597830|Read verse out loud for pleasure.|Read verse out loud for pleasure. 
-list4-q1_1671048490053|Hoist the load to your left shoulder.|Hoist the load to your left shoulder. 
+list4-q10_1671048532914|Hoist the load to your left shoulder.|Hoist the load to your left shoulder. 
 list4-q2_1671048494898|Take the winding path to reach the lake.|Take the winding path to reach the lake. 
 list4-q3_1671048499833|Note closely the size of the gas tank.|Note closely the size of the gas tank. 
 list4-q4_1671048504109|Wipe the grease off his dirty face.|Wipe the grease off his dirty face. 
@@ -38,7 +38,7 @@ list4-q7_1671048518891|The stray cat gave birth to kittens.|The stray cat gave b
 list4-q8_1671048523723|The young girl gave no clear response.|The young girl gave no clear response. 
 list4-q9_1671048528487|The meal was cooked before the bell rang.|The meal was cooked before the bell rang. 
 list4-q10_1671048532914|What joy there is in living.|What joy there is in living. 
-list5-q1_1671048425822|A king ruled the state in the early days.|A king ruled the state in the early days. 
+list5-q10_1671048474489|A king ruled the state in the early days.|A king ruled the state in the early days. 
 list5-q2_1671048431591|The ship was torn apart on the sharp reef.|The ship was torn apart on the sharp reef. 
 list5-q3_1671048436469|Sickness kept him home the third week.|Sickness kept him home the third week. 
 list5-q4_1671048441252|The wide road shimmered in the hot sun.|The wide road shimmered in the hot sun. 
@@ -48,7 +48,7 @@ list5-q7_1671048460304|The rope will bind the seven books at once.|The rope will
 list5-q8_1671048464836|Hop over the fence and plunge in.|Hop over the fence and plunge in. 
 list5-q9_1671048469754|The friendly gang left the drug store.|The friendly gang left the drug store. 
 list5-q10_1671048474489|Mesh wire keeps chicks inside.|Mesh wire keeps chicks inside. 
-list6-q1_1671048341158|The frosty air passed through the coat.|The frosty air passed through the coat. 
+list6-q10_1671048414404|The frosty air passed through the coat.|The frosty air passed through the coat. 
 list6-q2_1671048346374|The crooked maze failed to fool the mouse.|The crooked maze failed to fool the mouse. 
 list6-q3_1671048363261|Adding fast leads to wrong sums.|Adding fast leads to wrong sums. 
 list6-q4_1671048372452|The show was a flop from the very start.|The show was a flop from the very start. 
@@ -68,7 +68,7 @@ list7-q7_1671048312079|The set of china hit the floor with a crash.|The set of c
 list7-q8_1671048317827|This is a grand season for hikes on the road.|This is a grand season for hikes on the road. 
 list7-q9_1671048323379|The dune rose from the edge of the water.|The dune rose from the edge of the water. 
 list7-q10_1671048329197|Those words were the cue for the actor to leave.|Those words were the cue for the actor to leave. 
-list8-q1_1671048198938|A yacht slid around the point into the bay.|A yacht slid around the point into the bay. 
+list8-q10_1671048262306|A yacht slid around the point into the bay.|A yacht slid around the point into the bay. 
 list8-q2_1671048204618|The two met while playing on the sand.|The two met while playing on the sand. 
 list8-q3_1671048214796|The ink stain dried on the finished page.|The ink stain dried on the finished page. 
 list8-q4_1671048220444|The walled town was seized without a fight.|The walled town was seized without a fight. 
@@ -88,3 +88,174 @@ list9-q7_1671048154458|Cut the pie into large parts.|Cut the pie into large part
 list9-q8_1671048159979|Men strive but seldom get rich.|Men strive but seldom get rich. 
 list9-q9_1671048170127|Always close the barn door tight.|Always close the barn door tight. 
 list9-q10_1671048175898|He lay prone and hardly moved a limb.|He lay prone and hardly moved a limb. 
+list10-q10_1671468883237|The slush lay deep along the street.|The slush lay deep along the street. 
+list10-q2_1671468829583|A wisp of cloud hung in the blue air.|A wisp of cloud hung in the blue air. 
+list10-q3_1671468838669|A pound of sugar costs more than eggs.|A pound of sugar costs more than eggs. 
+list10-q4_1671468845550|The fin was sharp and cut the clear water.|The fin was sharp and cut the clear water. 
+list10-q5_1671468854124|The play seems dull and quite stupid.|The play seems dull and quite stupid. 
+list10-q6_1671468861152|Bail the boat to stop it from sinking.|Bail the boat to stop it from sinking. 
+list10-q7_1671468866870|The term ended in late June that year.|The term ended in late June that year. 
+list10-q8_1671468872583|A tusk is used to make costly gifts.|A tusk is used to make costly gifts. 
+list10-q9_1671468877590|Ten pins were set in order.|Ten pins were set in order. 
+list10-q10_1671468883237|The bill was paid every third week.|The bill was paid every third week. 
+list11-q10_1671468955386|Oak is strong and also gives shade.|Oak is strong and also gives shade. 
+list11-q2_1671468909874|Cats and dogs each hate the other.|Cats and dogs each hate the other. 
+list11-q3_1671468915097|The pipe began to rust while new.|The pipe began to rust while new. 
+list11-q4_1671468920618|Open the crate but dont break the glass.|Open the crate but dont break the glass. 
+list11-q5_1671468926723|Add the sum to the product of these three.|Add the sum to the product of these three. 
+list11-q6_1671468932399|Thieves who rob friends deserve jail.|Thieves who rob friends deserve jail. 
+list11-q7_1671468939091|The ripe taste of cheese improves with age.|The ripe taste of cheese improves with age. 
+list11-q8_1671468944671|Act on these orders with great speed.|Act on these orders with great speed. 
+list11-q9_1671468950204|The hog crawled under the high fence.|The hog crawled under the high fence. 
+list11-q10_1671468955386|Move the vat over the hot fire.|Move the vat over the hot fire. 
+list12-q1_1671468966082|The bark of the pine tree was shiny and dark.|The bark of the pine tree was shiny and dark. 
+list12-q2_1671468971839|Leaves turn brown and yellow in the fall.|Leaves turn brown and yellow in the fall. 
+list12-q3_1671468977861|The pennant waved when the wind blew.|The pennant waved when the wind blew. 
+list12-q4_1671468987933|Split the log with a quick sharp blow.|Split the log with a quick sharp blow. 
+list12-q5_1671468993180|Burn peat after the logs give out.|Burn peat after the logs give out. 
+list12-q6_1671468998168|He ordered peach pie with ice cream.|He ordered peach pie with ice cream. 
+list12-q7_1671469003910|Weave the carpet on the right hand side.|Weave the carpet on the right hand side. 
+list12-q8_1671469009509|Hemp is a weed found in parts of the tropics.|Hemp is a weed found in parts of the tropics. 
+list12-q9_1671469014515|A lame back kept his score low.|A lame back kept his score low. 
+list12-q10_1671469021356|We find joy in the simplest things.|We find joy in the simplest things. 
+list13-q1_1671469031168|Type out three lists of orders.|Type out three lists of orders. 
+list13-q2_1671469036393|The harder he tried the less he got done.|The harder he tried the less he got done. 
+list13-q3_1671469041283|The boss ran the show with a watchful eye.|The boss ran the show with a watchful eye. 
+list13-q4_1671469046976|The cup cracked and spilled its contents.|The cup cracked and spilled its contents. 
+list13-q5_1671469052855|Paste can cleanse the most dirty brass.|Paste can cleanse the most dirty brass. 
+list13-q6_1671469058146|The slang word for raw whiskey is booze.|The slang word for raw whiskey is booze. 
+list13-q7_1671469063989|It caught its hind paw in a rusty trap.|It caught its hind paw in a rusty trap. 
+list13-q8_1671469070104|The wharf could be seen at the farther shore.|The wharf could be seen at the farther shore. 
+list13-q9_1671469075019|Feel the heat of the weak dying flame.|Feel the heat of the weak dying flame. 
+list13-q10_1671469079564|The tiny girl took off her hat.|The tiny girl took off her hat. 
+list14-q1_1671469089839|A cramp is no small danger on a swim.|A cramp is no small danger on a swim. 
+list14-q2_1671469094753|He said the same phrase thirty times.|He said the same phrase thirty times. 
+list14-q3_1671469104166|Pluck the bright rose without leaves.|Pluck the bright rose without leaves. 
+list14-q4_1671469109121|Two plus seven is less than ten.|Two plus seven is less than ten. 
+list14-q5_1671469114717|The glow deepened in the eyes of the sweet girl.|The glow deepened in the eyes of the sweet girl. 
+list14-q6_1671469119962|Bring your problems to the wise chief.|Bring your problems to the wise chief. 
+list14-q7_1671469131170|Write a fond note to the friend you cherish.|Write a fond note to the friend you cherish. 
+list14-q8_1671469139887|Clothes and lodging are free to new men.|Clothes and lodging are free to new men. 
+list14-q9_1671469144719|We frown when events take a bad turn.|We frown when events take a bad turn. 
+list14-q10_1671469149732|Port is a strong wine with a smoky taste.|Port is a strong wine with a smoky taste. 
+list15-q10_1671469216977|The young kid jumped the rusty gate.|The young kid jumped the rusty gate. 
+list15-q2_1671469165982|Guess the results from the first scores.|Guess the results from the first scores. 
+list15-q3_1671469170704|A salt pickle tastes fine with ham.|A salt pickle tastes fine with ham. 
+list15-q4_1671469180586|The just claim got the right verdict.|The just claim got the right verdict. 
+list15-q5_1671469185899|These thistles bend in a high wind.|These thistles bend in a high wind. 
+list15-q6_1671469190788|Pure bred poodles have curls.|Pure bred poodles have curls. 
+list15-q7_1671469200339|The tree top waved in a graceful way.|The tree top waved in a graceful way. 
+list15-q8_1671469206554|The spot on the blotter was made by green ink.|The spot on the blotter was made by green ink. 
+list15-q9_1671469212299|Mud was spattered on the front of his white shirt.|Mud was spattered on the front of his white shirt. 
+list15-q10_1671469216977|The cigar burned a hole in the desk top.|The cigar burned a hole in the desk top. 
+list200-q10_1671472444139|Printing in the only sense with which we are at present concerned differs from most if not from all the arts and crafts represented in the Exhibition.|Printing in the only sense with which we are at present concerned differs from most if not from all the arts and crafts represented in the Exhibition. 
+list200-q2_1671472361504|in being comparatively modern.|in being comparatively modern. 
+list200-q3_1671472375635|For although the Chinese took impressions from wood blocks engraved in relief for centuries before the woodcutters of the Netherlands by a similar process.|For although the Chinese took impressions from wood blocks engraved in relief for centuries before the woodcutters of the Netherlands by a similar process. 
+list200-q4_1671472386116|produced the block books which were the immediate predecessors of the true printed book.|produced the block books which were the immediate predecessors of the true printed book. 
+list200-q5_1671472399202|the invention of movable metal letters in the middle of the fifteenth century may justly be considered as the invention of the art of printing.|the invention of movable metal letters in the middle of the fifteenth century may justly be considered as the invention of the art of printing. 
+list200-q6_1671472408196|And it is worth mention in passing that as an example of fine typography.|And it is worth mention in passing that as an example of fine typography. 
+list200-q7_1671472420268|the earliest book printed with movable types the Gutenberg or fortytwo line Bible of about fourteen fiftyfive.|the earliest book printed with movable types the Gutenberg or fortytwo line Bible of about fourteen fiftyfive. 
+list200-q8_1671472424628|has never been surpassed.|has never been surpassed. 
+list200-q9_1671472433529|Printing then for our purpose may be considered as the art of making books by means of movable types.|Printing then for our purpose may be considered as the art of making books by means of movable types. 
+list200-q10_1671472444139|Now as all books not primarily intended as picturebooks consist principally of types composed to form letterpress.|Now as all books not primarily intended as picturebooks consist principally of types composed to form letterpress. 
+list201-q1_1672253678225|it is of the first importance that the letter used should be fine in form.|it is of the first importance that the letter used should be fine in form. 
+list201-q2_1672253695629|especially as no more time is occupied or cost incurred in casting setting or printing beautiful letters.|especially as no more time is occupied or cost incurred in casting setting or printing beautiful letters. 
+list201-q3_1672253702051|than in the same operations with ugly ones.|than in the same operations with ugly ones. 
+list201-q4_1672253716035|And it was a matter of course that in the Middle Ages when the craftsmen took care that beautiful form should always be a part of their productions whatever they were.|And it was a matter of course that in the Middle Ages when the craftsmen took care that beautiful form should always be a part of their productions whatever they were. 
+list201-q5_1672253731087|the forms of printed letters should be beautiful and that their arrangement on the page should be reasonable and a help to the shapeliness of the letters themselves.|the forms of printed letters should be beautiful and that their arrangement on the page should be reasonable and a help to the shapeliness of the letters themselves. 
+list201-q6_1672253741274|The Middle Ages brought calligraphy to perfection and it was natural therefore.|The Middle Ages brought calligraphy to perfection and it was natural therefore. 
+list201-q7_1672253751168|that the forms of printed letters should follow more or less closely those of the written character and they followed them very closely.|that the forms of printed letters should follow more or less closely those of the written character and they followed them very closely. 
+list201-q8_1672253760639|The first books were printed in black letter ie the letter which was a Gothic development of the ancient Roman character.|The first books were printed in black letter ie the letter which was a Gothic development of the ancient Roman character. 
+list201-q9_1672253769905|and which developed more completely and satisfactorily on the side of the lowercase than the capital letters.|and which developed more completely and satisfactorily on the side of the lowercase than the capital letters. 
+list201-q10_1672253777000|the lowercase being in fact invented in the early Middle Ages.|the lowercase being in fact invented in the early Middle Ages. 
+list202-q1_1672253820569|The earliest book printed with movable type the aforesaid Gutenberg Bible is printed in letters which are an exact imitation.|The earliest book printed with movable type the aforesaid Gutenberg Bible is printed in letters which are an exact imitation. 
+list202-q2_1672253863911|of the more formal ecclesiastical writing which obtained at that time this has since been called missal type.|of the more formal ecclesiastical writing which obtained at that time this has since been called missal type. 
+list202-q3_1672253892690|and was in fact the kind of letter used in the many splendid missals psalters etc produced by printing in the fifteenth century.|and was in fact the kind of letter used in the many splendid missals psalters etc produced by printing in the fifteenth century. 
+list202-q4_1672253904604|But the first Bible actually dated which also was printed at Maintz by Peter Schoeffer in the year fourteen sixtytwo.|But the first Bible actually dated which also was printed at Maintz by Peter Schoeffer in the year fourteen sixtytwo. 
+list202-q5_1672253917245|imitates a much freer hand simpler rounder and less spiky and therefore far pleasanter and easier to read.|imitates a much freer hand simpler rounder and less spiky and therefore far pleasanter and easier to read. 
+list202-q6_1672253946634|On the whole the type of this book may be considered the neplusultra of Gothic type.|On the whole the type of this book may be considered the neplusultra of Gothic type. 
+list202-q7_1672253958500|especially as regards the lowercase letters and type very similar was used during the next fifteen or twenty years not only by Schoeffer.|especially as regards the lowercase letters and type very similar was used during the next fifteen or twenty years not only by Schoeffer. 
+list202-q8_1672253967889|but by printers in Strasburg Basle Paris Lubeck and other cities.|but by printers in Strasburg Basle Paris Lubeck and other cities. 
+list202-q9_1672253975883|But though on the whole except in Italy Gothic letter was most often used.|But though on the whole except in Italy Gothic letter was most often used. 
+list202-q10_1672253984710|a very few years saw the birth of Roman character not only in Italy but in Germany and France.|a very few years saw the birth of Roman character not only in Italy but in Germany and France. 
+list203-q1_1672254269791|In fourteen sixtyfive Sweynheim and Pannartz began printing in the monastery of Subiaco near Rome.|In fourteen sixtyfive Sweynheim and Pannartz began printing in the monastery of Subiaco near Rome. 
+list203-q2_1672254283879|and used an exceedingly beautiful type which is indeed to look at a transition between Gothic and Roman.|and used an exceedingly beautiful type which is indeed to look at a transition between Gothic and Roman. 
+list203-q3_1672254300805|but which must certainly have come from the study of the twelfth or even the eleventh century MSS.|but which must certainly have come from the study of the twelfth or even the eleventh century MSS. 
+list203-q4_1672254318612|They printed very few books in this type three only but in their very first books in Rome beginning with the year fourteen sixtyeight.|They printed very few books in this type three only but in their very first books in Rome beginning with the year fourteen sixtyeight. 
+list203-q5_1672254327866|they discarded this for a more completely Roman and far less beautiful letter.|they discarded this for a more completely Roman and far less beautiful letter. 
+list203-q6_1672254338519|But about the same year Mentelin at Strasburg began to print in a type which is distinctly Roman.|But about the same year Mentelin at Strasburg began to print in a type which is distinctly Roman. 
+list203-q7_1672254351124|and the next year Gunther Zeiner at Augsburg followed suit.|and the next year Gunther Zeiner at Augsburg followed suit. 
+list203-q8_1672254364118|while in fourteen seventy at Paris Udalric Gering and his associates turned out the first books printed in France also in Roman character.|while in fourteen seventy at Paris Udalric Gering and his associates turned out the first books printed in France also in Roman character. 
+list203-q9_1672254371505|The Roman type of all these printers is similar in character.|The Roman type of all these printers is similar in character. 
+list203-q10_1672254381142|and is very simple and legible and unaffectedly designed for use but it is by no means without beauty.|and is very simple and legible and unaffectedly designed for use but it is by no means without beauty. 
+list206-q1_1672254390942|the Roman letter was used side by side with the Gothic.|the Roman letter was used side by side with the Gothic. 
+list206-q2_1672254397988|Even in Italy most of the theological and law books were printed in Gothic letter.|Even in Italy most of the theological and law books were printed in Gothic letter. 
+list206-q3_1672254405809|which was generally more formally Gothic than the printing of the German workmen.|which was generally more formally Gothic than the printing of the German workmen. 
+list206-q4_1672254415076|many of whose types indeed like that of the Subiaco works are of a transitional character.|many of whose types indeed like that of the Subiaco works are of a transitional character. 
+list206-q5_1672254425403|This was notably the case with the early works printed at Ulm and in a somewhat lesser degree at Augsburg.|This was notably the case with the early works printed at Ulm and in a somewhat lesser degree at Augsburg. 
+list206-q6_1672254437632|In fact Gunther Zeiners first type afterwards used by Schussler is remarkably like the type of the beforementioned Subiaco books.|In fact Gunther Zeiners first type afterwards used by Schussler is remarkably like the type of the beforementioned Subiaco books. 
+list206-q7_1672254446536|In the Low Countries and Cologne which were very fertile of printed books Gothic was the favorite.|In the Low Countries and Cologne which were very fertile of printed books Gothic was the favorite. 
+list206-q8_1672254468220|The characteristic Dutch type as represented by the excellent printer Gerard Leew is very pronounced and uncompromising Gothic.|The characteristic Dutch type as represented by the excellent printer Gerard Leew is very pronounced and uncompromising Gothic. 
+list206-q9_1672254476462|This type was introduced into England by Wynkyn de Worde Caxtons successor.|This type was introduced into England by Wynkyn de Worde Caxtons successor. 
+list206-q10_1672254489014|and was used there with very little variation all through the sixteenth and seventeenth centuries and indeed into the eighteenth.|and was used there with very little variation all through the sixteenth and seventeenth centuries and indeed into the eighteenth. 
+list208-q1_1672253999471|type cast from his matrices is still in everyday use.|type cast from his matrices is still in everyday use. 
+list208-q2_1672254009414|In spite however of his praiseworthy efforts printing had still one last degradation to undergo.|In spite however of his praiseworthy efforts printing had still one last degradation to undergo. 
+list208-q3_1672254029826|The seventeenth century founts were bad rather negatively than positively.|The seventeenth century founts were bad rather negatively than positively. 
+list208-q4_1672254036325|But for the beauty of the earlier work they might have seemed tolerable.|But for the beauty of the earlier work they might have seemed tolerable. 
+list208-q5_1672254048297|It was reserved for the founders of the later eighteenth century to produce letters which are positively ugly and which it may be added.|It was reserved for the founders of the later eighteenth century to produce letters which are positively ugly and which it may be added. 
+list208-q6_1672254057966|are dazzling and unpleasant to the eye owing to the clumsy thickening and vulgar thinning of the lines.|are dazzling and unpleasant to the eye owing to the clumsy thickening and vulgar thinning of the lines. 
+list208-q7_1672254070024|for the seventeenthcentury letters are at least pure and simple in line The Italian Bodoni and the Frenchman Didot.|for the seventeenthcentury letters are at least pure and simple in line The Italian Bodoni and the Frenchman Didot. 
+list208-q8_1672254084620|were the leaders in this luckless change though our own Baskerville who was at work some years before them went much on the same lines.|were the leaders in this luckless change though our own Baskerville who was at work some years before them went much on the same lines. 
+list208-q9_1672254097170|but his letters though uninteresting and poor are not nearly so gross and vulgar as those of either the Italian or the Frenchman.|but his letters though uninteresting and poor are not nearly so gross and vulgar as those of either the Italian or the Frenchman. 
+list208-q10_1672254102898|With this change the art of printing touched bottom.|With this change the art of printing touched bottom. 
+list213-q10_1672255025005|the size known as Long primer ought to be the smallest size used in a book meant to be read.|the size known as Long primer ought to be the smallest size used in a book meant to be read. 
+list213-q2_1672254948486|Here again if the practice of leading were retrenched larger type could be used without enhancing the price of a book.|Here again if the practice of leading were retrenched larger type could be used without enhancing the price of a book. 
+list213-q3_1672254959509|One very important matter in setting up for fine printing is the spacing that is the lateral distance of words from one another.|One very important matter in setting up for fine printing is the spacing that is the lateral distance of words from one another. 
+list213-q4_1672254967035|In good printing the spaces between the words should be as near as possible equal.|In good printing the spaces between the words should be as near as possible equal. 
+list213-q5_1672254974048|it is impossible that they should be quite equal except in lines of poetry.|it is impossible that they should be quite equal except in lines of poetry. 
+list213-q6_1672254981371|modern printers understand this but it is only practiced in the very best establishments.|modern printers understand this but it is only practiced in the very best establishments. 
+list213-q7_1672254989175|But another point which they should attend to they almost always disregard.|But another point which they should attend to they almost always disregard. 
+list213-q8_1672254997110|this is the tendency to the formation of ugly meandering white lines or rivers in the page.|this is the tendency to the formation of ugly meandering white lines or rivers in the page. 
+list213-q9_1672255015959|a blemish which can be nearly though not wholly avoided by care and forethought.|a blemish which can be nearly though not wholly avoided by care and forethought. 
+list213-q10_1672255025005|the desirable thing being the breaking of the line as in bonding masonry or brickwork.|the desirable thing being the breaking of the line as in bonding masonry or brickwork. 
+list219-q1_1672254778686|The prison population fluctuated a great deal.|The prison population fluctuated a great deal. 
+list219-q2_1672254796910|but it was almost always in excess of the accommodation available and there were times when the place was full to overflowing.|but it was almost always in excess of the accommodation available and there were times when the place was full to overflowing. 
+list219-q3_1672254804112|Neild gives some figures which well illustrate this.|Neild gives some figures which well illustrate this. 
+list219-q4_1672254814379|On the fourteenth June eighteen hundred there were one hundred ninetynine debtors and two hundred eightynine felons in the prison.|On the fourteenth June eighteen hundred there were one hundred ninetynine debtors and two hundred eightynine felons in the prison. 
+list219-q5_1672254820135|On the twentyseventh April in the following year.|On the twentyseventh April in the following year. 
+list219-q6_1672254831182|these numbers had risen to two hundred seventyfive and three hundred seventyfive respectively or six hundred fifty in all.|these numbers had risen to two hundred seventyfive and three hundred seventyfive respectively or six hundred fifty in all. 
+list219-q7_1672254842221|For two more years these high figures were steadily maintained and in eighteen oh three the total rose to seven hundred ten.|For two more years these high figures were steadily maintained and in eighteen oh three the total rose to seven hundred ten. 
+list219-q8_1672254847568|After that they fell as steadily.|After that they fell as steadily. 
+list219-q9_1672254860946|till eighteen oh eight the lowest point was touched of one hundred ninetyseven debtors and one hundred eightytwo felons or three hundred seventynine in all.|till eighteen oh eight the lowest point was touched of one hundred ninetyseven debtors and one hundred eightytwo felons or three hundred seventynine in all. 
+list219-q10_1672254876964|The numbers soon increased however and by eighteen eleven had again risen to six hundred twentynine and Mr Neild was told that there had been at one time.|The numbers soon increased however and by eighteen eleven had again risen to six hundred twentynine and Mr Neild was told that there had been at one time. 
+list224-q1_1672254133936|This arrangement was however modified after eighteen eleven and the chapel yard was allotted to misdemeanants and prisoners awaiting trial.|This arrangement was however modified after eighteen eleven and the chapel yard was allotted to misdemeanants and prisoners awaiting trial. 
+list224-q2_1672254145945|The wards in this part were five in number all in dimensions twenty feet by fifteen with a sixth ward fifteen feet square.|The wards in this part were five in number all in dimensions twenty feet by fifteen with a sixth ward fifteen feet square. 
+list224-q3_1672254160401|These wards were all fitted with barrackbeds but no bedding was supplied.|These wards were all fitted with barrackbeds but no bedding was supplied. 
+list224-q4_1672254173514|The chapel yard led to the chapel and on the staircase were two rooms frequently set apart for the kings witnesses.|The chapel yard led to the chapel and on the staircase were two rooms frequently set apart for the kings witnesses. 
+list224-q5_1672254195620|those who had turned kings evidence whose safety might have been imperiled had they been lodged with the men against whom they had informed.|those who had turned kings evidence whose safety might have been imperiled had they been lodged with the men against whom they had informed. 
+list224-q6_1672254207860|But these kings witnesses were also put at times into the press yard among the capital convicts seemingly a very dangerous proceeding.|But these kings witnesses were also put at times into the press yard among the capital convicts seemingly a very dangerous proceeding. 
+list224-q7_1672254216448|or they lodged with the gatesmen the prisoner officers who had charge of the inner gates.|or they lodged with the gatesmen the prisoner officers who had charge of the inner gates. 
+list224-q8_1672254228836|The middle yard was at first given up to the least heinous offenders After eighteen twelve it changed functions with the chapel yard.|The middle yard was at first given up to the least heinous offenders After eighteen twelve it changed functions with the chapel yard. 
+list224-q9_1672254241015|It was fifty feet by twentyfive and had five wards each thirtyeight by fifteen At one end of the yard was an arcade.|It was fifty feet by twentyfive and had five wards each thirtyeight by fifteen At one end of the yard was an arcade. 
+list224-q10_1672254252142|directly under the chapel in which there were three cells used either for the confinement of disorderly and refractory prisoners.|directly under the chapel in which there were three cells used either for the confinement of disorderly and refractory prisoners. 
+list244-q1_1672254895374|A committee of collegians was elected to act as the executive also a secretary or accountant to receive monies and keep books.|A committee of collegians was elected to act as the executive also a secretary or accountant to receive monies and keep books. 
+list246-q1_1672254646274|went outside and beyond the prison to call on their creditors and try to arrange their debts but this practice was discontinued.|went outside and beyond the prison to call on their creditors and try to arrange their debts but this practice was discontinued. 
+list246-q2_1672254668858|There were fifteen rooms of various sizes and as the numbers imprisoned rarely exceeded fiveandtwenty the place was never overcrowded.|There were fifteen rooms of various sizes and as the numbers imprisoned rarely exceeded fiveandtwenty the place was never overcrowded. 
+list246-q3_1672254678430|while the funds of several bequests and charities were applied in adding to the material comfort of the prisoners.|while the funds of several bequests and charities were applied in adding to the material comfort of the prisoners. 
+list246-q4_1672254689496|The Giltspur Street Compter received sheriffs debtors also felons vagrants and night charges.|The Giltspur Street Compter received sheriffs debtors also felons vagrants and night charges. 
+list246-q5_1672254702657|It was generally crowded as debtors who would have gone to the Poultry Compter were sent to Giltspur Street when the former was condemned as unfit to receive prisoners.|It was generally crowded as debtors who would have gone to the Poultry Compter were sent to Giltspur Street when the former was condemned as unfit to receive prisoners. 
+list246-q6_1672254709886|The demands for fees were excessive in Giltspur Street.|The demands for fees were excessive in Giltspur Street. 
+list246-q7_1672254716827|Those who could not pay were thrown into the wards with the night charges.|Those who could not pay were thrown into the wards with the night charges. 
+list246-q8_1672254727262|and denied admission to the charity wards which partook of all the benefits of bequests and donations to poor debtors.|and denied admission to the charity wards which partook of all the benefits of bequests and donations to poor debtors. 
+list246-q9_1672254754123|The Borough Compter was in a disgraceful state to the last The mens ward had an earth or rather a mud floor.|The Borough Compter was in a disgraceful state to the last The mens ward had an earth or rather a mud floor. 
+list246-q10_1672254767078|and was so unfit to sleep on that it had not been used for many years so that the men and women associated together indiscriminately.|and was so unfit to sleep on that it had not been used for many years so that the men and women associated together indiscriminately. 
+list249-q1_1672254503747|looked forward to his liberty he was still delayed until he had paid a new debt arising quote.|looked forward to his liberty he was still delayed until he had paid a new debt arising quote. 
+list249-q2_1672254522964|only out of a satisfaction of all his former debts end quote The fees were not always extorted it is true.|only out of a satisfaction of all his former debts end quote The fees were not always extorted it is true. 
+list249-q3_1672254547093|nor was nonpayment made a pretext for further imprisonment thanks to the humanity of the jailer or the funds provided by various charities.|nor was nonpayment made a pretext for further imprisonment thanks to the humanity of the jailer or the funds provided by various charities. 
+list249-q4_1672254555052|There was this much honest forbearance in Newgate in these days.|There was this much honest forbearance in Newgate in these days. 
+list249-q5_1672254565752|that debtors who could afford the cabin and masters side were not permitted to share in the prison charities.|that debtors who could afford the cabin and masters side were not permitted to share in the prison charities. 
+list249-q6_1672254571676|These were lumped together into a general fund.|These were lumped together into a general fund. 
+list249-q7_1672254582955|and a calculation made as to the amount that might be expended per week from the whole sum so that the latter might last out the year.|and a calculation made as to the amount that might be expended per week from the whole sum so that the latter might last out the year. 
+list249-q8_1672254595068|It generally ran to about six pounds per week The money which at one time had been distributed quarterly and all went in drink.|It generally ran to about six pounds per week The money which at one time had been distributed quarterly and all went in drink. 
+list249-q9_1672254616826|was after eighteen oh seven through the exertions of the keeper of the jail spent in the purchase of necessaries.|was after eighteen oh seven through the exertions of the keeper of the jail spent in the purchase of necessaries. 
+list249-q10_1672254626559|But this weekly pittance did not go far when the debtors side was crowded as it often was.|But this weekly pittance did not go far when the debtors side was crowded as it often was. 
