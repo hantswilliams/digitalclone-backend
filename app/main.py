@@ -310,16 +310,3 @@ async def get_random_sentance(random_count: str):
     return df_sentances_dict
 
 
-@app.get("/sentances_v1")
-async def get_all_sentances():
-    # convert the df sentances to dictionary
-    sentances = pd.read_csv('/voiceCloning/sentances/sentances.csv')
-    df_sentances_dict = sentances.to_dict('records')
-    return df_sentances_dict
-
-@app.get("/sentances_v2")
-async def get_all_sentances():
-    # convert the df sentances to dictionary
-    sentances = pd.read_csv('/voiceCloning/sentances/sentances2.csv')
-    df_sentances_dict = sentances.to_dict('records')
-    return df_sentances_dict

@@ -9,6 +9,8 @@ aws_jobs_voiceclone/tts_tests/testdata2/clean_quality/p1_convert
 aws_jobs_voiceclone/tts_tests/testdata2/clean_quality/p2_silence
 aws_jobs_voiceclone/tts_tests/testdata2/clean_quality/p3_noise
 
+# ignore files in raw/ that begin with list
+aws_jobs_voiceclone/tts_tests/testdata2/raw/
 
 digital-clone-saas-firebase-adminsdk-8s7c6-35294053d3.json
 */digital-clone-saas-firebase-adminsdk-8s7c6-35294053d3.json
